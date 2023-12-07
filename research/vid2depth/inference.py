@@ -13,21 +13,21 @@
 # limitations under the License.
 # ==============================================================================
 
-"""Generates depth estimates for an entire KITTI video."""
+"""Generates depth estimates for an entire DATASET video."""
 
 # Example usage:
 #
 # python inference.py \
 #   --logtostderr \
-#   --kitti_dir ~/vid2depth/kitti-raw-uncompressed \
-#   --kitti_video 2011_09_26/2011_09_26_drive_0009_sync \
+#   --dataset_dir ~/vid2depth/dataset-raw-uncompressed \
+#   --dataset_video 2011_09_26/2011_09_26_drive_0009_sync \
 #   --output_dir ~/vid2depth/inference \
 #   --model_ckpt ~/vid2depth/trained-model/model-119496
 #
 # python inference.py \
 #   --logtostderr \
-#   --kitti_dir ~/vid2depth/kitti-raw-uncompressed \
-#   --kitti_video test_files_eigen \
+#   --dataset_dir ~/vid2depth/dataset-raw-uncompressed \
+#   --dataset_video test_files_eigen \
 #   --output_dir ~/vid2depth/inference \
 #   --model_ckpt ~/vid2depth/trained-model/model-119496
 #
@@ -51,20 +51,20 @@ gfile = tf.gfile
 
 HOME_DIR = os.path.expanduser('~')
 DEFAULT_OUTPUT_DIR = os.path.join(HOME_DIR, 'vid2depth/inference')
-DEFAULT_KITTI_DIR = os.path.join(HOME_DIR, 'kitti-raw-uncompressed')
+DEFAULT_DATASET_DIR = os.path.join(HOME_DIR, 'dataset-raw-uncompressed')
 
 flags.DEFINE_string('output_dir', DEFAULT_OUTPUT_DIR,
                     'Directory to store estimated depth maps.')
-flags.DEFINE_string('kitti_dir', DEFAULT_KITTI_DIR, 'KITTI dataset directory.')
+flags.DEFINE_string('dataset_dir', DEFAULT_DATASET_DIR, 'DATASET dataset directory.')
 flags.DEFINE_string('model_ckpt', None, 'Model checkpoint to load.')
-flags.DEFINE_string('kitti_video', None, 'KITTI video directory name.')
+flags.DEFINE_string('dataset_video', None, 'DATASET video directory name.')
 flags.DEFINE_integer('batch_size', 4, 'The size of a sample batch.')
 flags.DEFINE_integer('img_height', 128, 'Image height.')
 flags.DEFINE_integer('img_width', 416, 'Image width.')
 flags.DEFINE_integer('seq_length', 3, 'Sequence length for each example.')
 FLAGS = flags.FLAGS
 
-flags.mark_flag_as_required('kitti_video')
+flags.mark_flag_as_required('dataset_video')
 flags.mark_flag_as_required('model_ckpt')
 
 CMAP = 'plasma'
@@ -75,7 +75,7 @@ def _run_inference():
   ckpt_basename = os.path.basename(FLAGS.model_ckpt)
   ckpt_modelname = os.path.basename(os.path.dirname(FLAGS.model_ckpt))
   output_dir = os.path.join(FLAGS.output_dir,
-                            FLAGS.kitti_video.replace('/', '_') + '_' +
+                            FLAGS.dataset_video.replace('/', '_') + '_' +
                             ckpt_modelname + '_' + ckpt_basename)
   if not gfile.Exists(output_dir):
     gfile.MakeDirs(output_dir)
@@ -89,12 +89,12 @@ def _run_inference():
   sv = tf.train.Supervisor(logdir='/tmp/', saver=None)
   with sv.managed_session() as sess:
     saver.restore(sess, FLAGS.model_ckpt)
-    if FLAGS.kitti_video == 'test_files_eigen':
+    if FLAGS.dataset_video == 'test_files_eigen':
       im_files = util.read_text_lines(
-          util.get_resource_path('dataset/kitti/test_files_eigen.txt'))
-      im_files = [os.path.join(FLAGS.kitti_dir, f) for f in im_files]
+          util.get_resource_path('dataset/dataset/test_files_eigen.txt'))
+      im_files = [os.path.join(FLAGS.dataset_dir, f) for f in im_files]
     else:
-      video_path = os.path.join(FLAGS.kitti_dir, FLAGS.kitti_video)
+      video_path = os.path.join(FLAGS.dataset_dir, FLAGS.dataset_video)
       im_files = gfile.Glob(os.path.join(video_path, 'image_02/data', '*.png'))
       im_files = [f for f in im_files if 'disp' not in f]
       im_files = sorted(im_files)
@@ -116,7 +116,7 @@ def _run_inference():
         idx = i + b
         if idx >= len(im_files):
           break
-        if FLAGS.kitti_video == 'test_files_eigen':
+        if FLAGS.dataset_video == 'test_files_eigen':
           depth_path = os.path.join(output_dir, '%03d.png' % idx)
         else:
           depth_path = os.path.join(output_dir, '%04d.png' % idx)
