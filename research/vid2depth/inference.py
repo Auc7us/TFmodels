@@ -95,7 +95,7 @@ def _run_inference():
       im_files = [os.path.join(FLAGS.dataset_dir, f) for f in im_files]
     else:
       video_path = os.path.join(FLAGS.dataset_dir, FLAGS.dataset_video)
-      im_files = gfile.Glob(os.path.join(video_path, 'image_02/data', '*.png'))
+      im_files = gfile.Glob(os.path.join(video_path,'*.jpg'))
       im_files = [f for f in im_files if 'disp' not in f]
       im_files = sorted(im_files)
     for i in range(0, len(im_files), FLAGS.batch_size):
