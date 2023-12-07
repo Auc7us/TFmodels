@@ -165,7 +165,7 @@ def _gen_example(i, all_examples):
   if not tf.io.gfile.exists(save_dir):
     tf.io.gfile.makedirs(save_dir)
   img_filepath = os.path.join(save_dir, '%s.jpg' % example['file_name'])
-  imageio.imwrite(img_filepath, image_seq_stack.astype(np.uint8))
+  imageio.write(img_filepath, image_seq_stack.astype(np.uint8))
 #scipy.misc.imsave(img_filepath, image_seq_stack.astype(np.uint8))
   cam_filepath = os.path.join(save_dir, '%s_cam.txt' % example['file_name'])
   example['cam'] = '%f,0.,%f,0.,%f,%f,0.,0.,1.' % (fx, cx, fy, cy)

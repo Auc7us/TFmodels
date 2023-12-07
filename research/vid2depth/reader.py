@@ -125,7 +125,9 @@ class DataReader(object):
     image_seq_aug *= random_brightness
     # Randomly shift color.
     random_colors = tf.random_uniform([3], 0.8, 1.2)
-    white = tf.ones([tf.shape(image_seq)[0], tf.shape(image_seq)[1]])
+    white = tf.ones(tf.shape(image_seq)[:2], dtype=image_seq.dtype)
+#    white = tf.ones([tf.shape(image_seq)[0], tf.shape(image_seq)[1]])
+
     color_image = tf.stack([white * random_colors[i] for i in range(3)], axis=2)
     image_seq_aug *= color_image
     # Saturate.

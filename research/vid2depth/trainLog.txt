@@ -1,0 +1,1002 @@
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+ERROR:absl:Could not load object file for ICP op.
+WARNING:tensorflow:From train.py:81: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+W1206 22:16:18.756379 140226673833792 module_wrapper.py:139] From train.py:81: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+WARNING:tensorflow:From train.py:88: The name tf.gfile.Exists is deprecated. Please use tf.io.gfile.exists instead.
+
+W1206 22:16:18.760335 140226673833792 module_wrapper.py:139] From train.py:88: The name tf.gfile.Exists is deprecated. Please use tf.io.gfile.exists instead.
+
+I1206 22:16:18.760499 140226673833792 model.py:68] data_dir: /home/pachipala/vid2depth/data/bike
+I1206 22:16:18.760652 140226673833792 model.py:69] learning_rate: 0.0002
+I1206 22:16:18.760730 140226673833792 model.py:70] beta1: 0.9
+I1206 22:16:18.760766 140226673833792 model.py:71] smooth_weight: 0.05
+I1206 22:16:18.760799 140226673833792 model.py:72] ssim_weight: 0.15
+I1206 22:16:18.760831 140226673833792 model.py:73] icp_weight: 0.0
+I1206 22:16:18.760861 140226673833792 model.py:74] batch_size: 4
+I1206 22:16:18.760925 140226673833792 model.py:75] img_height: 128
+I1206 22:16:18.760957 140226673833792 model.py:76] img_width: 416
+I1206 22:16:18.760987 140226673833792 model.py:77] seq_length: 3
+I1206 22:16:18.761016 140226673833792 model.py:78] legacy_mode: False
+I1206 22:16:18.761237 140226673833792 reader.py:181] data_dir: /home/pachipala/vid2depth/data/bike
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/reader.py:182: The name tf.gfile.Open is deprecated. Please use tf.io.gfile.GFile instead.
+
+W1206 22:16:18.761336 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/reader.py:182: The name tf.gfile.Open is deprecated. Please use tf.io.gfile.GFile instead.
+
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/reader.py:53: string_input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(string_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+W1206 22:16:20.040909 140226673833792 deprecation.py:323] From /home/pachipala/models/research/vid2depth/reader.py:53: string_input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(string_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+WARNING:tensorflow:From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:277: input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(input_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+W1206 22:16:20.643677 140226673833792 deprecation.py:323] From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:277: input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(input_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+WARNING:tensorflow:From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:189: limit_epochs (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensors(tensor).repeat(num_epochs)`.
+W1206 22:16:20.644517 140226673833792 deprecation.py:323] From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:189: limit_epochs (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensors(tensor).repeat(num_epochs)`.
+WARNING:tensorflow:From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:198: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+W1206 22:16:20.647854 140226673833792 deprecation.py:323] From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:198: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:198: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+W1206 22:16:20.648746 140226673833792 deprecation.py:323] From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/python/training/input.py:198: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/reader.py:56: WholeFileReader.__init__ (from tensorflow.python.ops.io_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.map(tf.read_file)`.
+W1206 22:16:21.197404 140226673833792 deprecation.py:323] From /home/pachipala/models/research/vid2depth/reader.py:56: WholeFileReader.__init__ (from tensorflow.python.ops.io_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.map(tf.read_file)`.
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/reader.py:61: TextLineReader.__init__ (from tensorflow.python.ops.io_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.TextLineDataset`.
+W1206 22:16:21.198992 140226673833792 deprecation.py:323] From /home/pachipala/models/research/vid2depth/reader.py:61: TextLineReader.__init__ (from tensorflow.python.ops.io_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.TextLineDataset`.
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/reader.py:66: The name tf.decode_csv is deprecated. Please use tf.io.decode_csv instead.
+
+W1206 22:16:21.199958 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/reader.py:66: The name tf.decode_csv is deprecated. Please use tf.io.decode_csv instead.
+
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/reader.py:121: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+W1206 22:16:21.206966 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/reader.py:121: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/reader.py:151: The name tf.image.resize_area is deprecated. Please use tf.compat.v1.image.resize_area instead.
+
+W1206 22:16:21.243400 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/reader.py:151: The name tf.image.resize_area is deprecated. Please use tf.compat.v1.image.resize_area instead.
+
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/reader.py:86: The name tf.matrix_inverse is deprecated. Please use tf.linalg.inv instead.
+
+W1206 22:16:21.364283 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/reader.py:86: The name tf.matrix_inverse is deprecated. Please use tf.linalg.inv instead.
+
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/reader.py:95: shuffle_batch (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.shuffle(min_after_dequeue).batch(batch_size)`.
+W1206 22:16:21.365036 140226673833792 deprecation.py:323] From /home/pachipala/models/research/vid2depth/reader.py:95: shuffle_batch (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.shuffle(min_after_dequeue).batch(batch_size)`.
+I1206 22:16:21.372549 140226673833792 reader.py:96] image_stack: Tensor("data_loading/batching/shuffle_batch:0", shape=(4, 128, 416, 9), dtype=float32)
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/nets.py:81: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+W1206 22:16:21.372741 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/nets.py:81: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/contrib/layers/python/layers/layers.py:1057: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+W1206 22:16:21.373635 140226673833792 deprecation.py:323] From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/contrib/layers/python/layers/layers.py:1057: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/nets.py:207: The name tf.image.resize_nearest_neighbor is deprecated. Please use tf.compat.v1.image.resize_nearest_neighbor instead.
+
+W1206 22:16:22.080062 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/nets.py:207: The name tf.image.resize_nearest_neighbor is deprecated. Please use tf.compat.v1.image.resize_nearest_neighbor instead.
+
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/nets.py:172: The name tf.image.resize_bilinear is deprecated. Please use tf.compat.v1.image.resize_bilinear instead.
+
+W1206 22:16:22.324389 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/nets.py:172: The name tf.image.resize_bilinear is deprecated. Please use tf.compat.v1.image.resize_bilinear instead.
+
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/model.py:127: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+W1206 22:16:22.575536 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/model.py:127: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+I1206 22:16:23.566379 140226673833792 model.py:128] disp: {0: [<tf.Tensor 'depth_prediction/depth_net/add_3:0' shape=(4, 128, 416, 1) dtype=float32>, <tf.Tensor 'depth_prediction/depth_net/add_2:0' shape=(4, 64, 208, 1) dtype=float32>, <tf.Tensor 'depth_prediction/depth_net/add_1:0' shape=(4, 32, 104, 1) dtype=float32>, <tf.Tensor 'depth_prediction/depth_net/add:0' shape=(4, 16, 52, 1) dtype=float32>], 1: [<tf.Tensor 'depth_prediction/depth_net_1/add_3:0' shape=(4, 128, 416, 1) dtype=float32>, <tf.Tensor 'depth_prediction/depth_net_1/add_2:0' shape=(4, 64, 208, 1) dtype=float32>, <tf.Tensor 'depth_prediction/depth_net_1/add_1:0' shape=(4, 32, 104, 1) dtype=float32>, <tf.Tensor 'depth_prediction/depth_net_1/add:0' shape=(4, 16, 52, 1) dtype=float32>], 2: [<tf.Tensor 'depth_prediction/depth_net_2/add_3:0' shape=(4, 128, 416, 1) dtype=float32>, <tf.Tensor 'depth_prediction/depth_net_2/add_2:0' shape=(4, 64, 208, 1) dtype=float32>, <tf.Tensor 'depth_prediction/depth_net_2/add_1:0' shape=(4, 32, 104, 1) dtype=float32>, <tf.Tensor 'depth_prediction/depth_net_2/add:0' shape=(4, 16, 52, 1) dtype=float32>]}
+WARNING:tensorflow:From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/python/util/dispatch.py:180: calling squeeze (from tensorflow.python.ops.array_ops) with squeeze_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the `axis` argument instead
+W1206 22:16:23.733711 140226673833792 deprecation.py:506] From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/python/util/dispatch.py:180: calling squeeze (from tensorflow.python.ops.array_ops) with squeeze_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+Use the `axis` argument instead
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/project.py:217: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W1206 22:16:23.775071 140226673833792 deprecation.py:323] From /home/pachipala/models/research/vid2depth/project.py:217: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/model.py:271: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+W1206 22:16:27.424163 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/model.py:271: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/python/ops/math_grad.py:1424: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W1206 22:16:27.631102 140226673833792 deprecation.py:323] From /opt/conda/envs/tf/lib/python3.7/site-packages/tensorflow_core/python/ops/math_grad.py:1424: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/model.py:274: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+W1206 22:16:38.406001 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/model.py:274: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/model.py:278: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+W1206 22:16:38.407801 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/model.py:278: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/model.py:289: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+W1206 22:16:38.411183 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/model.py:289: The name tf.summary.histogram is deprecated. Please use tf.compat.v1.summary.histogram instead.
+
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/model.py:298: The name tf.summary.image is deprecated. Please use tf.compat.v1.summary.image instead.
+
+W1206 22:16:38.443151 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/model.py:298: The name tf.summary.image is deprecated. Please use tf.compat.v1.summary.image instead.
+
+I1206 22:16:38.561342 140226673833792 util.py:72] Model Parameters:
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/util.py:94: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+
+W1206 22:16:38.561478 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/util.py:94: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+
+WARNING:tensorflow:From /home/pachipala/models/research/vid2depth/util.py:96: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+W1206 22:16:38.561599 140226673833792 module_wrapper.py:139] From /home/pachipala/models/research/vid2depth/util.py:96: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+I1206 22:16:38.562546 140226673833792 util.py:77] depth_prediction/depth_net/cnv1/BatchNorm/beta (32,): 32
+I1206 22:16:38.562676 140226673833792 util.py:77] depth_prediction/depth_net/cnv1/BatchNorm/moving_mean (32,): 32
+I1206 22:16:38.562752 140226673833792 util.py:77] depth_prediction/depth_net/cnv1/BatchNorm/moving_variance (32,): 32
+I1206 22:16:38.562826 140226673833792 util.py:77] depth_prediction/depth_net/cnv1/weights (7, 7, 3, 32): 4,704
+I1206 22:16:38.562897 140226673833792 util.py:77] depth_prediction/depth_net/cnv1b/BatchNorm/beta (32,): 32
+I1206 22:16:38.562961 140226673833792 util.py:77] depth_prediction/depth_net/cnv1b/BatchNorm/moving_mean (32,): 32
+I1206 22:16:38.563023 140226673833792 util.py:77] depth_prediction/depth_net/cnv1b/BatchNorm/moving_variance (32,): 32
+I1206 22:16:38.563088 140226673833792 util.py:77] depth_prediction/depth_net/cnv1b/weights (7, 7, 32, 32): 50,176
+I1206 22:16:38.563154 140226673833792 util.py:77] depth_prediction/depth_net/cnv2/BatchNorm/beta (64,): 64
+I1206 22:16:38.563215 140226673833792 util.py:77] depth_prediction/depth_net/cnv2/BatchNorm/moving_mean (64,): 64
+I1206 22:16:38.563275 140226673833792 util.py:77] depth_prediction/depth_net/cnv2/BatchNorm/moving_variance (64,): 64
+I1206 22:16:38.563338 140226673833792 util.py:77] depth_prediction/depth_net/cnv2/weights (5, 5, 32, 64): 51,200
+I1206 22:16:38.563401 140226673833792 util.py:77] depth_prediction/depth_net/cnv2b/BatchNorm/beta (64,): 64
+I1206 22:16:38.563460 140226673833792 util.py:77] depth_prediction/depth_net/cnv2b/BatchNorm/moving_mean (64,): 64
+I1206 22:16:38.563519 140226673833792 util.py:77] depth_prediction/depth_net/cnv2b/BatchNorm/moving_variance (64,): 64
+I1206 22:16:38.563590 140226673833792 util.py:77] depth_prediction/depth_net/cnv2b/weights (5, 5, 64, 64): 102,400
+I1206 22:16:38.563655 140226673833792 util.py:77] depth_prediction/depth_net/cnv3/BatchNorm/beta (128,): 128
+I1206 22:16:38.563714 140226673833792 util.py:77] depth_prediction/depth_net/cnv3/BatchNorm/moving_mean (128,): 128
+I1206 22:16:38.563773 140226673833792 util.py:77] depth_prediction/depth_net/cnv3/BatchNorm/moving_variance (128,): 128
+I1206 22:16:38.563848 140226673833792 util.py:77] depth_prediction/depth_net/cnv3/weights (3, 3, 64, 128): 73,728
+I1206 22:16:38.563916 140226673833792 util.py:77] depth_prediction/depth_net/cnv3b/BatchNorm/beta (128,): 128
+I1206 22:16:38.563986 140226673833792 util.py:77] depth_prediction/depth_net/cnv3b/BatchNorm/moving_mean (128,): 128
+I1206 22:16:38.564047 140226673833792 util.py:77] depth_prediction/depth_net/cnv3b/BatchNorm/moving_variance (128,): 128
+I1206 22:16:38.564109 140226673833792 util.py:77] depth_prediction/depth_net/cnv3b/weights (3, 3, 128, 128): 147,456
+I1206 22:16:38.564172 140226673833792 util.py:77] depth_prediction/depth_net/cnv4/BatchNorm/beta (256,): 256
+I1206 22:16:38.564231 140226673833792 util.py:77] depth_prediction/depth_net/cnv4/BatchNorm/moving_mean (256,): 256
+I1206 22:16:38.564290 140226673833792 util.py:77] depth_prediction/depth_net/cnv4/BatchNorm/moving_variance (256,): 256
+I1206 22:16:38.564352 140226673833792 util.py:77] depth_prediction/depth_net/cnv4/weights (3, 3, 128, 256): 294,912
+I1206 22:16:38.564414 140226673833792 util.py:77] depth_prediction/depth_net/cnv4b/BatchNorm/beta (256,): 256
+I1206 22:16:38.564474 140226673833792 util.py:77] depth_prediction/depth_net/cnv4b/BatchNorm/moving_mean (256,): 256
+I1206 22:16:38.564532 140226673833792 util.py:77] depth_prediction/depth_net/cnv4b/BatchNorm/moving_variance (256,): 256
+I1206 22:16:38.564601 140226673833792 util.py:77] depth_prediction/depth_net/cnv4b/weights (3, 3, 256, 256): 589,824
+I1206 22:16:38.564665 140226673833792 util.py:77] depth_prediction/depth_net/cnv5/BatchNorm/beta (512,): 512
+I1206 22:16:38.564724 140226673833792 util.py:77] depth_prediction/depth_net/cnv5/BatchNorm/moving_mean (512,): 512
+I1206 22:16:38.564782 140226673833792 util.py:77] depth_prediction/depth_net/cnv5/BatchNorm/moving_variance (512,): 512
+I1206 22:16:38.564845 140226673833792 util.py:77] depth_prediction/depth_net/cnv5/weights (3, 3, 256, 512): 1,179,648
+I1206 22:16:38.564906 140226673833792 util.py:77] depth_prediction/depth_net/cnv5b/BatchNorm/beta (512,): 512
+I1206 22:16:38.564965 140226673833792 util.py:77] depth_prediction/depth_net/cnv5b/BatchNorm/moving_mean (512,): 512
+I1206 22:16:38.565023 140226673833792 util.py:77] depth_prediction/depth_net/cnv5b/BatchNorm/moving_variance (512,): 512
+I1206 22:16:38.565084 140226673833792 util.py:77] depth_prediction/depth_net/cnv5b/weights (3, 3, 512, 512): 2,359,296
+I1206 22:16:38.565145 140226673833792 util.py:77] depth_prediction/depth_net/cnv6/BatchNorm/beta (512,): 512
+I1206 22:16:38.565204 140226673833792 util.py:77] depth_prediction/depth_net/cnv6/BatchNorm/moving_mean (512,): 512
+I1206 22:16:38.565262 140226673833792 util.py:77] depth_prediction/depth_net/cnv6/BatchNorm/moving_variance (512,): 512
+I1206 22:16:38.565324 140226673833792 util.py:77] depth_prediction/depth_net/cnv6/weights (3, 3, 512, 512): 2,359,296
+I1206 22:16:38.565384 140226673833792 util.py:77] depth_prediction/depth_net/cnv6b/BatchNorm/beta (512,): 512
+I1206 22:16:38.565443 140226673833792 util.py:77] depth_prediction/depth_net/cnv6b/BatchNorm/moving_mean (512,): 512
+I1206 22:16:38.565502 140226673833792 util.py:77] depth_prediction/depth_net/cnv6b/BatchNorm/moving_variance (512,): 512
+I1206 22:16:38.565569 140226673833792 util.py:77] depth_prediction/depth_net/cnv6b/weights (3, 3, 512, 512): 2,359,296
+I1206 22:16:38.565633 140226673833792 util.py:77] depth_prediction/depth_net/cnv7/BatchNorm/beta (512,): 512
+I1206 22:16:38.565691 140226673833792 util.py:77] depth_prediction/depth_net/cnv7/BatchNorm/moving_mean (512,): 512
+I1206 22:16:38.565768 140226673833792 util.py:77] depth_prediction/depth_net/cnv7/BatchNorm/moving_variance (512,): 512
+I1206 22:16:38.565833 140226673833792 util.py:77] depth_prediction/depth_net/cnv7/weights (3, 3, 512, 512): 2,359,296
+I1206 22:16:38.565898 140226673833792 util.py:77] depth_prediction/depth_net/cnv7b/BatchNorm/beta (512,): 512
+I1206 22:16:38.565961 140226673833792 util.py:77] depth_prediction/depth_net/cnv7b/BatchNorm/moving_mean (512,): 512
+I1206 22:16:38.566023 140226673833792 util.py:77] depth_prediction/depth_net/cnv7b/BatchNorm/moving_variance (512,): 512
+I1206 22:16:38.566087 140226673833792 util.py:77] depth_prediction/depth_net/cnv7b/weights (3, 3, 512, 512): 2,359,296
+I1206 22:16:38.566154 140226673833792 util.py:77] depth_prediction/depth_net/disp1/biases (1,): 1
+I1206 22:16:38.566226 140226673833792 util.py:77] depth_prediction/depth_net/disp1/weights (3, 3, 16, 1): 144
+I1206 22:16:38.566293 140226673833792 util.py:77] depth_prediction/depth_net/disp2/biases (1,): 1
+I1206 22:16:38.566356 140226673833792 util.py:77] depth_prediction/depth_net/disp2/weights (3, 3, 32, 1): 288
+I1206 22:16:38.566421 140226673833792 util.py:77] depth_prediction/depth_net/disp3/biases (1,): 1
+I1206 22:16:38.566484 140226673833792 util.py:77] depth_prediction/depth_net/disp3/weights (3, 3, 64, 1): 576
+I1206 22:16:38.566581 140226673833792 util.py:77] depth_prediction/depth_net/disp4/biases (1,): 1
+I1206 22:16:38.566649 140226673833792 util.py:77] depth_prediction/depth_net/disp4/weights (3, 3, 128, 1): 1,152
+I1206 22:16:38.566714 140226673833792 util.py:77] depth_prediction/depth_net/icnv1/BatchNorm/beta (16,): 16
+I1206 22:16:38.566777 140226673833792 util.py:77] depth_prediction/depth_net/icnv1/BatchNorm/moving_mean (16,): 16
+I1206 22:16:38.566847 140226673833792 util.py:77] depth_prediction/depth_net/icnv1/BatchNorm/moving_variance (16,): 16
+I1206 22:16:38.566908 140226673833792 util.py:77] depth_prediction/depth_net/icnv1/weights (3, 3, 17, 16): 2,448
+I1206 22:16:38.566969 140226673833792 util.py:77] depth_prediction/depth_net/icnv2/BatchNorm/beta (32,): 32
+I1206 22:16:38.567028 140226673833792 util.py:77] depth_prediction/depth_net/icnv2/BatchNorm/moving_mean (32,): 32
+I1206 22:16:38.567086 140226673833792 util.py:77] depth_prediction/depth_net/icnv2/BatchNorm/moving_variance (32,): 32
+I1206 22:16:38.567147 140226673833792 util.py:77] depth_prediction/depth_net/icnv2/weights (3, 3, 65, 32): 18,720
+I1206 22:16:38.567208 140226673833792 util.py:77] depth_prediction/depth_net/icnv3/BatchNorm/beta (64,): 64
+I1206 22:16:38.567266 140226673833792 util.py:77] depth_prediction/depth_net/icnv3/BatchNorm/moving_mean (64,): 64
+I1206 22:16:38.567324 140226673833792 util.py:77] depth_prediction/depth_net/icnv3/BatchNorm/moving_variance (64,): 64
+I1206 22:16:38.567384 140226673833792 util.py:77] depth_prediction/depth_net/icnv3/weights (3, 3, 129, 64): 74,304
+I1206 22:16:38.567445 140226673833792 util.py:77] depth_prediction/depth_net/icnv4/BatchNorm/beta (128,): 128
+I1206 22:16:38.567504 140226673833792 util.py:77] depth_prediction/depth_net/icnv4/BatchNorm/moving_mean (128,): 128
+I1206 22:16:38.567567 140226673833792 util.py:77] depth_prediction/depth_net/icnv4/BatchNorm/moving_variance (128,): 128
+I1206 22:16:38.567629 140226673833792 util.py:77] depth_prediction/depth_net/icnv4/weights (3, 3, 256, 128): 294,912
+I1206 22:16:38.567691 140226673833792 util.py:77] depth_prediction/depth_net/icnv5/BatchNorm/beta (256,): 256
+I1206 22:16:38.567749 140226673833792 util.py:77] depth_prediction/depth_net/icnv5/BatchNorm/moving_mean (256,): 256
+I1206 22:16:38.567807 140226673833792 util.py:77] depth_prediction/depth_net/icnv5/BatchNorm/moving_variance (256,): 256
+I1206 22:16:38.567885 140226673833792 util.py:77] depth_prediction/depth_net/icnv5/weights (3, 3, 512, 256): 1,179,648
+I1206 22:16:38.567948 140226673833792 util.py:77] depth_prediction/depth_net/icnv6/BatchNorm/beta (512,): 512
+I1206 22:16:38.568006 140226673833792 util.py:77] depth_prediction/depth_net/icnv6/BatchNorm/moving_mean (512,): 512
+I1206 22:16:38.568065 140226673833792 util.py:77] depth_prediction/depth_net/icnv6/BatchNorm/moving_variance (512,): 512
+I1206 22:16:38.568126 140226673833792 util.py:77] depth_prediction/depth_net/icnv6/weights (3, 3, 1024, 512): 4,718,592
+I1206 22:16:38.568187 140226673833792 util.py:77] depth_prediction/depth_net/icnv7/BatchNorm/beta (512,): 512
+I1206 22:16:38.568245 140226673833792 util.py:77] depth_prediction/depth_net/icnv7/BatchNorm/moving_mean (512,): 512
+I1206 22:16:38.568303 140226673833792 util.py:77] depth_prediction/depth_net/icnv7/BatchNorm/moving_variance (512,): 512
+I1206 22:16:38.568365 140226673833792 util.py:77] depth_prediction/depth_net/icnv7/weights (3, 3, 1024, 512): 4,718,592
+I1206 22:16:38.568425 140226673833792 util.py:77] depth_prediction/depth_net/upcnv1/BatchNorm/beta (16,): 16
+I1206 22:16:38.568490 140226673833792 util.py:77] depth_prediction/depth_net/upcnv1/BatchNorm/moving_mean (16,): 16
+I1206 22:16:38.568549 140226673833792 util.py:77] depth_prediction/depth_net/upcnv1/BatchNorm/moving_variance (16,): 16
+I1206 22:16:38.568615 140226673833792 util.py:77] depth_prediction/depth_net/upcnv1/weights (3, 3, 16, 32): 4,608
+I1206 22:16:38.568677 140226673833792 util.py:77] depth_prediction/depth_net/upcnv2/BatchNorm/beta (32,): 32
+I1206 22:16:38.568735 140226673833792 util.py:77] depth_prediction/depth_net/upcnv2/BatchNorm/moving_mean (32,): 32
+I1206 22:16:38.568792 140226673833792 util.py:77] depth_prediction/depth_net/upcnv2/BatchNorm/moving_variance (32,): 32
+I1206 22:16:38.568852 140226673833792 util.py:77] depth_prediction/depth_net/upcnv2/weights (3, 3, 32, 64): 18,432
+I1206 22:16:38.568915 140226673833792 util.py:77] depth_prediction/depth_net/upcnv3/BatchNorm/beta (64,): 64
+I1206 22:16:38.568975 140226673833792 util.py:77] depth_prediction/depth_net/upcnv3/BatchNorm/moving_mean (64,): 64
+I1206 22:16:38.569032 140226673833792 util.py:77] depth_prediction/depth_net/upcnv3/BatchNorm/moving_variance (64,): 64
+I1206 22:16:38.569093 140226673833792 util.py:77] depth_prediction/depth_net/upcnv3/weights (3, 3, 64, 128): 73,728
+I1206 22:16:38.569155 140226673833792 util.py:77] depth_prediction/depth_net/upcnv4/BatchNorm/beta (128,): 128
+I1206 22:16:38.569214 140226673833792 util.py:77] depth_prediction/depth_net/upcnv4/BatchNorm/moving_mean (128,): 128
+I1206 22:16:38.569272 140226673833792 util.py:77] depth_prediction/depth_net/upcnv4/BatchNorm/moving_variance (128,): 128
+I1206 22:16:38.569333 140226673833792 util.py:77] depth_prediction/depth_net/upcnv4/weights (3, 3, 128, 256): 294,912
+I1206 22:16:38.569395 140226673833792 util.py:77] depth_prediction/depth_net/upcnv5/BatchNorm/beta (256,): 256
+I1206 22:16:38.569453 140226673833792 util.py:77] depth_prediction/depth_net/upcnv5/BatchNorm/moving_mean (256,): 256
+I1206 22:16:38.569512 140226673833792 util.py:77] depth_prediction/depth_net/upcnv5/BatchNorm/moving_variance (256,): 256
+I1206 22:16:38.569579 140226673833792 util.py:77] depth_prediction/depth_net/upcnv5/weights (3, 3, 256, 512): 1,179,648
+I1206 22:16:38.569642 140226673833792 util.py:77] depth_prediction/depth_net/upcnv6/BatchNorm/beta (512,): 512
+I1206 22:16:38.569700 140226673833792 util.py:77] depth_prediction/depth_net/upcnv6/BatchNorm/moving_mean (512,): 512
+I1206 22:16:38.569758 140226673833792 util.py:77] depth_prediction/depth_net/upcnv6/BatchNorm/moving_variance (512,): 512
+I1206 22:16:38.569819 140226673833792 util.py:77] depth_prediction/depth_net/upcnv6/weights (3, 3, 512, 512): 2,359,296
+I1206 22:16:38.569880 140226673833792 util.py:77] depth_prediction/depth_net/upcnv7/BatchNorm/beta (512,): 512
+I1206 22:16:38.569938 140226673833792 util.py:77] depth_prediction/depth_net/upcnv7/BatchNorm/moving_mean (512,): 512
+I1206 22:16:38.569996 140226673833792 util.py:77] depth_prediction/depth_net/upcnv7/BatchNorm/moving_variance (512,): 512
+I1206 22:16:38.570057 140226673833792 util.py:77] depth_prediction/depth_net/upcnv7/weights (3, 3, 512, 512): 2,359,296
+I1206 22:16:38.570119 140226673833792 util.py:77] pose_exp_net/cnv1/BatchNorm/beta (16,): 16
+I1206 22:16:38.570199 140226673833792 util.py:77] pose_exp_net/cnv1/BatchNorm/moving_mean (16,): 16
+I1206 22:16:38.570271 140226673833792 util.py:77] pose_exp_net/cnv1/BatchNorm/moving_variance (16,): 16
+I1206 22:16:38.570337 140226673833792 util.py:77] pose_exp_net/cnv1/weights (7, 7, 9, 16): 7,056
+I1206 22:16:38.570400 140226673833792 util.py:77] pose_exp_net/cnv2/BatchNorm/beta (32,): 32
+I1206 22:16:38.570470 140226673833792 util.py:77] pose_exp_net/cnv2/BatchNorm/moving_mean (32,): 32
+I1206 22:16:38.570540 140226673833792 util.py:77] pose_exp_net/cnv2/BatchNorm/moving_variance (32,): 32
+I1206 22:16:38.570612 140226673833792 util.py:77] pose_exp_net/cnv2/weights (5, 5, 16, 32): 12,800
+I1206 22:16:38.570675 140226673833792 util.py:77] pose_exp_net/cnv3/BatchNorm/beta (64,): 64
+I1206 22:16:38.570753 140226673833792 util.py:77] pose_exp_net/cnv3/BatchNorm/moving_mean (64,): 64
+I1206 22:16:38.570823 140226673833792 util.py:77] pose_exp_net/cnv3/BatchNorm/moving_variance (64,): 64
+I1206 22:16:38.570888 140226673833792 util.py:77] pose_exp_net/cnv3/weights (3, 3, 32, 64): 18,432
+I1206 22:16:38.570951 140226673833792 util.py:77] pose_exp_net/cnv4/BatchNorm/beta (128,): 128
+I1206 22:16:38.571020 140226673833792 util.py:77] pose_exp_net/cnv4/BatchNorm/moving_mean (128,): 128
+I1206 22:16:38.571089 140226673833792 util.py:77] pose_exp_net/cnv4/BatchNorm/moving_variance (128,): 128
+I1206 22:16:38.571154 140226673833792 util.py:77] pose_exp_net/cnv4/weights (3, 3, 64, 128): 73,728
+I1206 22:16:38.571217 140226673833792 util.py:77] pose_exp_net/cnv5/BatchNorm/beta (256,): 256
+I1206 22:16:38.571285 140226673833792 util.py:77] pose_exp_net/cnv5/BatchNorm/moving_mean (256,): 256
+I1206 22:16:38.571353 140226673833792 util.py:77] pose_exp_net/cnv5/BatchNorm/moving_variance (256,): 256
+I1206 22:16:38.571418 140226673833792 util.py:77] pose_exp_net/cnv5/weights (3, 3, 128, 256): 294,912
+I1206 22:16:38.571480 140226673833792 util.py:77] pose_exp_net/pose/cnv6/BatchNorm/beta (256,): 256
+I1206 22:16:38.571547 140226673833792 util.py:77] pose_exp_net/pose/cnv6/BatchNorm/moving_mean (256,): 256
+I1206 22:16:38.571623 140226673833792 util.py:77] pose_exp_net/pose/cnv6/BatchNorm/moving_variance (256,): 256
+I1206 22:16:38.571687 140226673833792 util.py:77] pose_exp_net/pose/cnv6/weights (3, 3, 256, 256): 589,824
+I1206 22:16:38.571748 140226673833792 util.py:77] pose_exp_net/pose/cnv7/BatchNorm/beta (256,): 256
+I1206 22:16:38.571815 140226673833792 util.py:77] pose_exp_net/pose/cnv7/BatchNorm/moving_mean (256,): 256
+I1206 22:16:38.571898 140226673833792 util.py:77] pose_exp_net/pose/cnv7/BatchNorm/moving_variance (256,): 256
+I1206 22:16:38.571962 140226673833792 util.py:77] pose_exp_net/pose/cnv7/weights (3, 3, 256, 256): 589,824
+I1206 22:16:38.572024 140226673833792 util.py:77] pose_exp_net/pose/pred/biases (12,): 12
+I1206 22:16:38.572086 140226673833792 util.py:77] pose_exp_net/pose/pred/weights (1, 1, 256, 12): 3,072
+I1206 22:16:38.572148 140226673833792 util.py:80] Total: 33,203,728
+WARNING:tensorflow:From train.py:116: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+W1206 22:16:38.573004 140226673833792 module_wrapper.py:139] From train.py:116: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From train.py:119: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W1206 22:16:38.673087 140226673833792 deprecation.py:323] From train.py:119: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From train.py:120: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+W1206 22:16:40.613135 140226673833792 module_wrapper.py:139] From train.py:120: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2023-12-06 22:16:40.613632: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2023-12-06 22:16:40.621639: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2199995000 Hz
+2023-12-06 22:16:40.623130: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x560928baa380 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2023-12-06 22:16:40.623159: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2023-12-06 22:16:40.625369: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2023-12-06 22:16:41.087540: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-12-06 22:16:41.089362: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x560924e52200 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2023-12-06 22:16:41.089402: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+2023-12-06 22:16:41.089653: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-12-06 22:16:41.091171: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2023-12-06 22:16:41.147716: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2023-12-06 22:16:41.169654: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2023-12-06 22:16:41.185038: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2023-12-06 22:16:41.209958: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2023-12-06 22:16:41.271259: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2023-12-06 22:16:41.290959: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2023-12-06 22:16:41.325653: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2023-12-06 22:16:41.325786: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-12-06 22:16:41.327562: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-12-06 22:16:41.329069: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2023-12-06 22:16:41.329121: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2023-12-06 22:16:41.330764: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-12-06 22:16:41.330779: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2023-12-06 22:16:41.330787: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2023-12-06 22:16:41.330908: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-12-06 22:16:41.332473: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-12-06 22:16:41.334039: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14069 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+INFO:tensorflow:Running local_init_op.
+I1206 22:16:44.359199 140226673833792 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I1206 22:16:45.246214 140226673833792 session_manager.py:502] Done running local_init_op.
+INFO:tensorflow:Starting standard services.
+I1206 22:16:59.686233 140226673833792 supervisor.py:737] Starting standard services.
+INFO:tensorflow:Starting queue runners.
+I1206 22:17:00.498369 140226673833792 supervisor.py:743] Starting queue runners.
+I1206 22:17:00.500751 140226673833792 train.py:126] Attempting to resume training from /home/pachipala/vid2depth/checkpoints...
+I1206 22:17:00.503618 140226673833792 train.py:128] Last checkpoint found: /home/pachipala/vid2depth/checkpoints/model-61934
+INFO:tensorflow:Restoring parameters from /home/pachipala/vid2depth/checkpoints/model-61934
+I1206 22:17:00.505017 140226673833792 saver.py:1284] Restoring parameters from /home/pachipala/vid2depth/checkpoints/model-61934
+2023-12-06 22:17:10.756038: I tensorflow/core/kernels/cuda_solvers.cc:159] Creating CudaSolver handles for stream 0x56093e3d0b50
+2023-12-06 22:17:10.756169: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2023-12-06 22:17:11.008262: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+I1206 22:17:11.861262 140226673833792 train.py:132] Training...
+2023-12-06 22:17:40.753436: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2023-12-06 22:17:41.882591: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+I1206 22:18:22.327288 140226673833792 train.py:160] Epoch: [ 2] [   66/61934] time: 70.47s (70s total) loss: 1.056
+I1206 22:18:52.700299 140226673833792 train.py:160] Epoch: [ 2] [  166/61934] time: 30.37s (100s total) loss: 0.737
+I1206 22:19:23.775796 140226673833792 train.py:160] Epoch: [ 2] [  266/61934] time: 31.08s (131s total) loss: 0.638
+I1206 22:19:55.327288 140226673833792 train.py:160] Epoch: [ 2] [  366/61934] time: 31.55s (163s total) loss: 0.721
+I1206 22:20:27.099907 140226673833792 train.py:160] Epoch: [ 2] [  466/61934] time: 31.77s (195s total) loss: 1.263
+I1206 22:20:58.674400 140226673833792 train.py:160] Epoch: [ 2] [  566/61934] time: 31.57s (226s total) loss: 0.620
+I1206 22:21:30.385559 140226673833792 train.py:160] Epoch: [ 2] [  666/61934] time: 31.71s (258s total) loss: 0.810
+I1206 22:22:02.051652 140226673833792 train.py:160] Epoch: [ 2] [  766/61934] time: 31.67s (290s total) loss: 0.661
+I1206 22:22:33.786958 140226673833792 train.py:160] Epoch: [ 2] [  866/61934] time: 31.74s (321s total) loss: 0.690
+I1206 22:23:05.476045 140226673833792 train.py:160] Epoch: [ 2] [  966/61934] time: 31.69s (353s total) loss: 0.714
+I1206 22:23:37.102477 140226673833792 train.py:160] Epoch: [ 2] [ 1066/61934] time: 31.63s (385s total) loss: 1.167
+I1206 22:24:08.779644 140226673833792 train.py:160] Epoch: [ 2] [ 1166/61934] time: 31.68s (416s total) loss: 0.594
+I1206 22:24:40.509499 140226673833792 train.py:160] Epoch: [ 2] [ 1266/61934] time: 31.73s (448s total) loss: 0.798
+I1206 22:25:12.136149 140226673833792 train.py:160] Epoch: [ 2] [ 1366/61934] time: 31.63s (480s total) loss: 0.866
+I1206 22:25:43.813343 140226673833792 train.py:160] Epoch: [ 2] [ 1466/61934] time: 31.68s (511s total) loss: 0.715
+I1206 22:26:15.449082 140226673833792 train.py:160] Epoch: [ 2] [ 1566/61934] time: 31.64s (543s total) loss: 0.674
+I1206 22:26:47.143472 140226673833792 train.py:160] Epoch: [ 2] [ 1666/61934] time: 31.69s (575s total) loss: 1.067
+I1206 22:27:18.863338 140226673833792 train.py:160] Epoch: [ 2] [ 1766/61934] time: 31.72s (607s total) loss: 0.648
+I1206 22:27:50.621599 140226673833792 train.py:160] Epoch: [ 2] [ 1866/61934] time: 31.76s (638s total) loss: 0.863
+I1206 22:28:22.358394 140226673833792 train.py:160] Epoch: [ 2] [ 1966/61934] time: 31.74s (670s total) loss: 0.895
+I1206 22:28:53.992020 140226673833792 train.py:160] Epoch: [ 2] [ 2066/61934] time: 31.63s (702s total) loss: 0.790
+I1206 22:29:25.799094 140226673833792 train.py:160] Epoch: [ 2] [ 2166/61934] time: 31.81s (733s total) loss: 0.582
+I1206 22:29:57.583674 140226673833792 train.py:160] Epoch: [ 2] [ 2266/61934] time: 31.78s (765s total) loss: 0.745
+I1206 22:30:29.231967 140226673833792 train.py:160] Epoch: [ 2] [ 2366/61934] time: 31.65s (797s total) loss: 0.685
+I1206 22:31:00.825747 140226673833792 train.py:160] Epoch: [ 2] [ 2466/61934] time: 31.59s (828s total) loss: 0.665
+I1206 22:31:32.278379 140226673833792 train.py:160] Epoch: [ 2] [ 2566/61934] time: 31.45s (860s total) loss: 0.674
+I1206 22:32:03.727408 140226673833792 train.py:160] Epoch: [ 2] [ 2666/61934] time: 31.45s (891s total) loss: 0.777
+I1206 22:32:35.145213 140226673833792 train.py:160] Epoch: [ 2] [ 2766/61934] time: 31.42s (923s total) loss: 0.746
+I1206 22:33:06.556642 140226673833792 train.py:160] Epoch: [ 2] [ 2866/61934] time: 31.41s (954s total) loss: 0.514
+I1206 22:33:38.005690 140226673833792 train.py:160] Epoch: [ 2] [ 2966/61934] time: 31.45s (986s total) loss: 0.751
+I1206 22:34:09.459573 140226673833792 train.py:160] Epoch: [ 2] [ 3066/61934] time: 31.45s (1017s total) loss: 0.675
+I1206 22:34:40.862654 140226673833792 train.py:160] Epoch: [ 2] [ 3166/61934] time: 31.40s (1049s total) loss: 0.792
+I1206 22:35:12.312318 140226673833792 train.py:160] Epoch: [ 2] [ 3266/61934] time: 31.45s (1080s total) loss: 0.967
+I1206 22:35:43.707597 140226673833792 train.py:160] Epoch: [ 2] [ 3366/61934] time: 31.40s (1111s total) loss: 1.001
+I1206 22:36:15.142916 140226673833792 train.py:160] Epoch: [ 2] [ 3466/61934] time: 31.44s (1143s total) loss: 0.620
+I1206 22:36:46.555584 140226673833792 train.py:160] Epoch: [ 2] [ 3566/61934] time: 31.41s (1174s total) loss: 0.755
+I1206 22:37:17.987361 140226673833792 train.py:160] Epoch: [ 2] [ 3666/61934] time: 31.43s (1206s total) loss: 1.129
+I1206 22:37:49.431176 140226673833792 train.py:160] Epoch: [ 2] [ 3766/61934] time: 31.44s (1237s total) loss: 1.302
+I1206 22:38:20.873859 140226673833792 train.py:160] Epoch: [ 2] [ 3866/61934] time: 31.44s (1269s total) loss: 0.797
+I1206 22:38:52.265168 140226673833792 train.py:160] Epoch: [ 2] [ 3966/61934] time: 31.39s (1300s total) loss: 0.976
+I1206 22:39:23.685045 140226673833792 train.py:160] Epoch: [ 2] [ 4066/61934] time: 31.42s (1331s total) loss: 0.671
+I1206 22:39:55.046861 140226673833792 train.py:160] Epoch: [ 2] [ 4166/61934] time: 31.36s (1363s total) loss: 0.768
+I1206 22:40:26.491401 140226673833792 train.py:160] Epoch: [ 2] [ 4266/61934] time: 31.44s (1394s total) loss: 0.824
+I1206 22:40:57.886705 140226673833792 train.py:160] Epoch: [ 2] [ 4366/61934] time: 31.40s (1426s total) loss: 0.817
+I1206 22:41:29.370816 140226673833792 train.py:160] Epoch: [ 2] [ 4466/61934] time: 31.48s (1457s total) loss: 0.747
+I1206 22:42:00.833138 140226673833792 train.py:160] Epoch: [ 2] [ 4566/61934] time: 31.46s (1488s total) loss: 0.724
+I1206 22:42:32.298846 140226673833792 train.py:160] Epoch: [ 2] [ 4666/61934] time: 31.47s (1520s total) loss: 0.725
+I1206 22:43:03.708640 140226673833792 train.py:160] Epoch: [ 2] [ 4766/61934] time: 31.41s (1551s total) loss: 0.579
+I1206 22:43:35.120766 140226673833792 train.py:160] Epoch: [ 2] [ 4866/61934] time: 31.41s (1583s total) loss: 0.653
+I1206 22:44:06.590562 140226673833792 train.py:160] Epoch: [ 2] [ 4966/61934] time: 31.47s (1614s total) loss: 0.591
+I1206 22:44:38.012373 140226673833792 train.py:160] Epoch: [ 2] [ 5066/61934] time: 31.42s (1646s total) loss: 0.752
+I1206 22:45:09.486531 140226673833792 train.py:160] Epoch: [ 2] [ 5166/61934] time: 31.47s (1677s total) loss: 0.901
+I1206 22:45:40.877327 140226673833792 train.py:160] Epoch: [ 2] [ 5266/61934] time: 31.39s (1709s total) loss: 0.629
+I1206 22:46:12.336864 140226673833792 train.py:160] Epoch: [ 2] [ 5366/61934] time: 31.46s (1740s total) loss: 0.996
+I1206 22:46:43.658408 140226673833792 train.py:160] Epoch: [ 2] [ 5466/61934] time: 31.32s (1771s total) loss: 0.896
+I1206 22:47:15.103800 140226673833792 train.py:160] Epoch: [ 2] [ 5566/61934] time: 31.45s (1803s total) loss: 0.394
+I1206 22:47:46.566854 140226673833792 train.py:160] Epoch: [ 2] [ 5666/61934] time: 31.46s (1834s total) loss: 0.674
+I1206 22:48:17.963113 140226673833792 train.py:160] Epoch: [ 2] [ 5766/61934] time: 31.40s (1866s total) loss: 1.264
+I1206 22:48:49.401161 140226673833792 train.py:160] Epoch: [ 2] [ 5866/61934] time: 31.44s (1897s total) loss: 0.668
+I1206 22:49:20.810743 140226673833792 train.py:160] Epoch: [ 2] [ 5966/61934] time: 31.41s (1928s total) loss: 0.849
+I1206 22:49:52.184621 140226673833792 train.py:160] Epoch: [ 2] [ 6066/61934] time: 31.37s (1960s total) loss: 0.819
+I1206 22:50:23.586487 140226673833792 train.py:160] Epoch: [ 2] [ 6166/61934] time: 31.40s (1991s total) loss: 0.770
+I1206 22:50:55.036936 140226673833792 train.py:160] Epoch: [ 2] [ 6266/61934] time: 31.45s (2023s total) loss: 0.899
+I1206 22:51:26.511299 140226673833792 train.py:160] Epoch: [ 2] [ 6366/61934] time: 31.47s (2054s total) loss: 0.673
+I1206 22:51:57.980826 140226673833792 train.py:160] Epoch: [ 2] [ 6466/61934] time: 31.47s (2086s total) loss: 0.554
+I1206 22:52:29.448817 140226673833792 train.py:160] Epoch: [ 2] [ 6566/61934] time: 31.47s (2117s total) loss: 0.760
+I1206 22:53:00.828755 140226673833792 train.py:160] Epoch: [ 2] [ 6666/61934] time: 31.38s (2148s total) loss: 0.826
+I1206 22:53:32.226412 140226673833792 train.py:160] Epoch: [ 2] [ 6766/61934] time: 31.40s (2180s total) loss: 0.626
+I1206 22:54:03.610319 140226673833792 train.py:160] Epoch: [ 2] [ 6866/61934] time: 31.38s (2211s total) loss: 0.811
+I1206 22:54:35.076632 140226673833792 train.py:160] Epoch: [ 2] [ 6966/61934] time: 31.47s (2243s total) loss: 0.619
+I1206 22:55:06.461548 140226673833792 train.py:160] Epoch: [ 2] [ 7066/61934] time: 31.38s (2274s total) loss: 1.217
+I1206 22:55:37.853670 140226673833792 train.py:160] Epoch: [ 2] [ 7166/61934] time: 31.39s (2305s total) loss: 0.641
+I1206 22:56:09.303626 140226673833792 train.py:160] Epoch: [ 2] [ 7266/61934] time: 31.45s (2337s total) loss: 0.874
+I1206 22:56:40.717830 140226673833792 train.py:160] Epoch: [ 2] [ 7366/61934] time: 31.41s (2368s total) loss: 0.744
+I1206 22:57:12.081116 140226673833792 train.py:160] Epoch: [ 2] [ 7466/61934] time: 31.36s (2400s total) loss: 0.615
+I1206 22:57:43.483480 140226673833792 train.py:160] Epoch: [ 2] [ 7566/61934] time: 31.40s (2431s total) loss: 0.467
+I1206 22:58:14.929316 140226673833792 train.py:160] Epoch: [ 2] [ 7666/61934] time: 31.45s (2463s total) loss: 0.655
+I1206 22:58:46.342916 140226673833792 train.py:160] Epoch: [ 2] [ 7766/61934] time: 31.41s (2494s total) loss: 0.691
+I1206 22:59:17.808378 140226673833792 train.py:160] Epoch: [ 2] [ 7866/61934] time: 31.47s (2525s total) loss: 1.001
+I1206 22:59:49.301140 140226673833792 train.py:160] Epoch: [ 2] [ 7966/61934] time: 31.49s (2557s total) loss: 1.113
+I1206 23:00:20.729809 140226673833792 train.py:160] Epoch: [ 2] [ 8066/61934] time: 31.43s (2588s total) loss: 0.668
+I1206 23:00:52.033102 140226673833792 train.py:160] Epoch: [ 2] [ 8166/61934] time: 31.30s (2620s total) loss: 0.623
+I1206 23:01:23.384011 140226673833792 train.py:160] Epoch: [ 2] [ 8266/61934] time: 31.35s (2651s total) loss: 0.660
+I1206 23:01:54.816796 140226673833792 train.py:160] Epoch: [ 2] [ 8366/61934] time: 31.43s (2682s total) loss: 0.631
+I1206 23:02:26.265594 140226673833792 train.py:160] Epoch: [ 2] [ 8466/61934] time: 31.45s (2714s total) loss: 0.672
+I1206 23:02:57.705937 140226673833792 train.py:160] Epoch: [ 2] [ 8566/61934] time: 31.44s (2745s total) loss: 0.828
+I1206 23:03:29.149770 140226673833792 train.py:160] Epoch: [ 2] [ 8666/61934] time: 31.44s (2777s total) loss: 0.820
+I1206 23:04:00.537652 140226673833792 train.py:160] Epoch: [ 2] [ 8766/61934] time: 31.39s (2808s total) loss: 0.778
+I1206 23:04:31.913545 140226673833792 train.py:160] Epoch: [ 2] [ 8866/61934] time: 31.38s (2840s total) loss: 0.609
+I1206 23:05:03.395053 140226673833792 train.py:160] Epoch: [ 2] [ 8966/61934] time: 31.48s (2871s total) loss: 0.686
+I1206 23:05:34.833033 140226673833792 train.py:160] Epoch: [ 2] [ 9066/61934] time: 31.44s (2902s total) loss: 0.667
+I1206 23:06:06.276962 140226673833792 train.py:160] Epoch: [ 2] [ 9166/61934] time: 31.44s (2934s total) loss: 0.798
+I1206 23:06:37.702795 140226673833792 train.py:160] Epoch: [ 2] [ 9266/61934] time: 31.43s (2965s total) loss: 0.646
+I1206 23:07:09.106961 140226673833792 train.py:160] Epoch: [ 2] [ 9366/61934] time: 31.40s (2997s total) loss: 1.313
+I1206 23:07:40.441570 140226673833792 train.py:160] Epoch: [ 2] [ 9466/61934] time: 31.33s (3028s total) loss: 0.770
+I1206 23:08:11.865878 140226673833792 train.py:160] Epoch: [ 2] [ 9566/61934] time: 31.42s (3060s total) loss: 0.640
+I1206 23:08:43.326808 140226673833792 train.py:160] Epoch: [ 2] [ 9666/61934] time: 31.46s (3091s total) loss: 0.692
+I1206 23:09:14.733901 140226673833792 train.py:160] Epoch: [ 2] [ 9766/61934] time: 31.41s (3122s total) loss: 0.742
+I1206 23:09:46.189447 140226673833792 train.py:160] Epoch: [ 2] [ 9866/61934] time: 31.46s (3154s total) loss: 1.194
+I1206 23:10:17.593947 140226673833792 train.py:160] Epoch: [ 2] [ 9966/61934] time: 31.40s (3185s total) loss: 0.848
+I1206 23:10:48.984895 140226673833792 train.py:160] Epoch: [ 2] [10066/61934] time: 31.39s (3217s total) loss: 0.781
+I1206 23:11:20.327111 140226673833792 train.py:160] Epoch: [ 2] [10166/61934] time: 31.34s (3248s total) loss: 0.904
+I1206 23:11:51.709038 140226673833792 train.py:160] Epoch: [ 2] [10266/61934] time: 31.38s (3279s total) loss: 0.914
+I1206 23:12:23.177713 140226673833792 train.py:160] Epoch: [ 2] [10366/61934] time: 31.47s (3311s total) loss: 0.688
+I1206 23:12:54.631311 140226673833792 train.py:160] Epoch: [ 2] [10466/61934] time: 31.45s (3342s total) loss: 1.275
+I1206 23:13:26.078939 140226673833792 train.py:160] Epoch: [ 2] [10566/61934] time: 31.45s (3374s total) loss: 0.637
+I1206 23:13:57.550403 140226673833792 train.py:160] Epoch: [ 2] [10666/61934] time: 31.47s (3405s total) loss: 0.571
+I1206 23:14:28.914690 140226673833792 train.py:160] Epoch: [ 2] [10766/61934] time: 31.36s (3437s total) loss: 0.797
+I1206 23:15:00.281455 140226673833792 train.py:160] Epoch: [ 2] [10866/61934] time: 31.37s (3468s total) loss: 0.610
+I1206 23:15:31.743294 140226673833792 train.py:160] Epoch: [ 2] [10966/61934] time: 31.46s (3499s total) loss: 0.695
+I1206 23:16:03.230437 140226673833792 train.py:160] Epoch: [ 2] [11066/61934] time: 31.49s (3531s total) loss: 0.660
+I1206 23:16:34.698858 140226673833792 train.py:160] Epoch: [ 2] [11166/61934] time: 31.47s (3562s total) loss: 0.711
+I1206 23:17:06.115103 140226673833792 train.py:160] Epoch: [ 2] [11266/61934] time: 31.42s (3594s total) loss: 0.769
+I1206 23:17:37.484137 140226673833792 train.py:160] Epoch: [ 2] [11366/61934] time: 31.37s (3625s total) loss: 0.773
+I1206 23:18:08.866268 140226673833792 train.py:160] Epoch: [ 2] [11466/61934] time: 31.38s (3657s total) loss: 0.627
+I1206 23:18:40.277676 140226673833792 train.py:160] Epoch: [ 2] [11566/61934] time: 31.41s (3688s total) loss: 0.798
+I1206 23:19:11.738739 140226673833792 train.py:160] Epoch: [ 2] [11666/61934] time: 31.46s (3719s total) loss: 0.469
+I1206 23:19:43.159064 140226673833792 train.py:160] Epoch: [ 2] [11766/61934] time: 31.42s (3751s total) loss: 0.535
+I1206 23:20:14.594445 140226673833792 train.py:160] Epoch: [ 2] [11866/61934] time: 31.44s (3782s total) loss: 1.030
+I1206 23:20:46.044771 140226673833792 train.py:160] Epoch: [ 2] [11966/61934] time: 31.45s (3814s total) loss: 0.554
+I1206 23:21:17.486513 140226673833792 train.py:160] Epoch: [ 2] [12066/61934] time: 31.44s (3845s total) loss: 0.965
+I1206 23:21:48.866046 140226673833792 train.py:160] Epoch: [ 2] [12166/61934] time: 31.38s (3877s total) loss: 0.739
+I1206 23:22:20.308712 140226673833792 train.py:160] Epoch: [ 2] [12266/61934] time: 31.44s (3908s total) loss: 0.592
+I1206 23:22:51.690384 140226673833792 train.py:160] Epoch: [ 2] [12366/61934] time: 31.38s (3939s total) loss: 0.752
+I1206 23:23:23.107687 140226673833792 train.py:160] Epoch: [ 2] [12466/61934] time: 31.42s (3971s total) loss: 0.758
+I1206 23:23:54.500931 140226673833792 train.py:160] Epoch: [ 2] [12566/61934] time: 31.39s (4002s total) loss: 0.735
+I1206 23:24:25.946245 140226673833792 train.py:160] Epoch: [ 2] [12666/61934] time: 31.45s (4034s total) loss: 0.709
+I1206 23:24:57.378869 140226673833792 train.py:160] Epoch: [ 2] [12766/61934] time: 31.43s (4065s total) loss: 0.555
+I1206 23:25:28.821431 140226673833792 train.py:160] Epoch: [ 2] [12866/61934] time: 31.44s (4096s total) loss: 0.803
+I1206 23:26:00.242285 140226673833792 train.py:160] Epoch: [ 2] [12966/61934] time: 31.42s (4128s total) loss: 0.771
+I1206 23:26:31.691223 140226673833792 train.py:160] Epoch: [ 2] [13066/61934] time: 31.45s (4159s total) loss: 0.694
+I1206 23:27:03.122322 140226673833792 train.py:160] Epoch: [ 2] [13166/61934] time: 31.43s (4191s total) loss: 0.564
+I1206 23:27:34.522124 140226673833792 train.py:160] Epoch: [ 2] [13266/61934] time: 31.40s (4222s total) loss: 0.592
+I1206 23:28:05.948116 140226673833792 train.py:160] Epoch: [ 2] [13366/61934] time: 31.43s (4254s total) loss: 0.741
+I1206 23:28:37.293707 140226673833792 train.py:160] Epoch: [ 2] [13466/61934] time: 31.35s (4285s total) loss: 0.921
+I1206 23:29:08.732803 140226673833792 train.py:160] Epoch: [ 2] [13566/61934] time: 31.44s (4316s total) loss: 0.818
+I1206 23:29:40.146188 140226673833792 train.py:160] Epoch: [ 2] [13666/61934] time: 31.41s (4348s total) loss: 0.659
+I1206 23:30:11.543655 140226673833792 train.py:160] Epoch: [ 2] [13766/61934] time: 31.40s (4379s total) loss: 0.708
+I1206 23:30:42.944593 140226673833792 train.py:160] Epoch: [ 2] [13866/61934] time: 31.40s (4411s total) loss: 1.119
+I1206 23:31:14.378285 140226673833792 train.py:160] Epoch: [ 2] [13966/61934] time: 31.43s (4442s total) loss: 0.695
+I1206 23:31:45.778347 140226673833792 train.py:160] Epoch: [ 2] [14066/61934] time: 31.40s (4473s total) loss: 1.140
+I1206 23:32:17.174009 140226673833792 train.py:160] Epoch: [ 2] [14166/61934] time: 31.40s (4505s total) loss: 0.678
+I1206 23:32:48.556716 140226673833792 train.py:160] Epoch: [ 2] [14266/61934] time: 31.38s (4536s total) loss: 0.648
+I1206 23:33:19.985817 140226673833792 train.py:160] Epoch: [ 2] [14366/61934] time: 31.43s (4568s total) loss: 0.523
+I1206 23:33:51.435571 140226673833792 train.py:160] Epoch: [ 2] [14466/61934] time: 31.45s (4599s total) loss: 0.718
+I1206 23:34:22.854959 140226673833792 train.py:160] Epoch: [ 2] [14566/61934] time: 31.42s (4630s total) loss: 0.722
+I1206 23:34:54.247348 140226673833792 train.py:160] Epoch: [ 2] [14666/61934] time: 31.39s (4662s total) loss: 0.716
+I1206 23:35:25.630555 140226673833792 train.py:160] Epoch: [ 2] [14766/61934] time: 31.38s (4693s total) loss: 0.701
+I1206 23:35:57.034229 140226673833792 train.py:160] Epoch: [ 2] [14866/61934] time: 31.40s (4725s total) loss: 0.700
+I1206 23:36:28.462289 140226673833792 train.py:160] Epoch: [ 2] [14966/61934] time: 31.43s (4756s total) loss: 0.780
+I1206 23:36:59.885560 140226673833792 train.py:160] Epoch: [ 2] [15066/61934] time: 31.42s (4788s total) loss: 0.597
+I1206 23:37:31.286205 140226673833792 train.py:160] Epoch: [ 2] [15166/61934] time: 31.40s (4819s total) loss: 0.682
+I1206 23:38:02.718430 140226673833792 train.py:160] Epoch: [ 2] [15266/61934] time: 31.43s (4850s total) loss: 0.761
+I1206 23:38:34.144387 140226673833792 train.py:160] Epoch: [ 2] [15366/61934] time: 31.43s (4882s total) loss: 0.826
+I1206 23:39:05.571817 140226673833792 train.py:160] Epoch: [ 2] [15466/61934] time: 31.43s (4913s total) loss: 0.611
+I1206 23:39:36.958498 140226673833792 train.py:160] Epoch: [ 2] [15566/61934] time: 31.39s (4945s total) loss: 0.816
+I1206 23:40:08.367747 140226673833792 train.py:160] Epoch: [ 2] [15666/61934] time: 31.41s (4976s total) loss: 0.816
+I1206 23:40:39.794703 140226673833792 train.py:160] Epoch: [ 2] [15766/61934] time: 31.43s (5007s total) loss: 1.045
+I1206 23:41:11.247916 140226673833792 train.py:160] Epoch: [ 2] [15866/61934] time: 31.45s (5039s total) loss: 1.383
+I1206 23:41:42.606762 140226673833792 train.py:160] Epoch: [ 2] [15966/61934] time: 31.36s (5070s total) loss: 0.696
+I1206 23:42:14.042916 140226673833792 train.py:160] Epoch: [ 2] [16066/61934] time: 31.44s (5102s total) loss: 0.465
+I1206 23:42:45.339006 140226673833792 train.py:160] Epoch: [ 2] [16166/61934] time: 31.30s (5133s total) loss: 1.121
+I1206 23:43:16.766043 140226673833792 train.py:160] Epoch: [ 2] [16266/61934] time: 31.43s (5164s total) loss: 0.759
+I1206 23:43:48.183345 140226673833792 train.py:160] Epoch: [ 2] [16366/61934] time: 31.42s (5196s total) loss: 1.175
+I1206 23:44:19.637408 140226673833792 train.py:160] Epoch: [ 2] [16466/61934] time: 31.45s (5227s total) loss: 0.610
+I1206 23:44:51.074998 140226673833792 train.py:160] Epoch: [ 2] [16566/61934] time: 31.44s (5259s total) loss: 0.857
+I1206 23:45:22.546863 140226673833792 train.py:160] Epoch: [ 2] [16666/61934] time: 31.47s (5290s total) loss: 0.599
+I1206 23:45:53.979625 140226673833792 train.py:160] Epoch: [ 2] [16766/61934] time: 31.43s (5322s total) loss: 1.051
+I1206 23:46:25.378757 140226673833792 train.py:160] Epoch: [ 2] [16866/61934] time: 31.40s (5353s total) loss: 0.575
+I1206 23:46:56.808814 140226673833792 train.py:160] Epoch: [ 2] [16966/61934] time: 31.43s (5384s total) loss: 0.584
+I1206 23:47:28.204011 140226673833792 train.py:160] Epoch: [ 2] [17066/61934] time: 31.40s (5416s total) loss: 0.777
+I1206 23:47:59.625389 140226673833792 train.py:160] Epoch: [ 2] [17166/61934] time: 31.42s (5447s total) loss: 0.689
+I1206 23:48:31.049156 140226673833792 train.py:160] Epoch: [ 2] [17266/61934] time: 31.42s (5479s total) loss: 0.672
+I1206 23:49:02.584835 140226673833792 train.py:160] Epoch: [ 2] [17366/61934] time: 31.54s (5510s total) loss: 0.530
+I1206 23:49:34.002683 140226673833792 train.py:160] Epoch: [ 2] [17466/61934] time: 31.42s (5542s total) loss: 0.744
+I1206 23:50:05.365904 140226673833792 train.py:160] Epoch: [ 2] [17566/61934] time: 31.36s (5573s total) loss: 0.889
+I1206 23:50:36.805920 140226673833792 train.py:160] Epoch: [ 2] [17666/61934] time: 31.44s (5604s total) loss: 0.692
+I1206 23:51:08.220209 140226673833792 train.py:160] Epoch: [ 2] [17766/61934] time: 31.41s (5636s total) loss: 0.757
+I1206 23:51:39.627442 140226673833792 train.py:160] Epoch: [ 2] [17866/61934] time: 31.41s (5667s total) loss: 0.592
+I1206 23:52:11.079908 140226673833792 train.py:160] Epoch: [ 2] [17966/61934] time: 31.45s (5699s total) loss: 0.400
+I1206 23:52:42.497879 140226673833792 train.py:160] Epoch: [ 2] [18066/61934] time: 31.42s (5730s total) loss: 0.784
+I1206 23:53:13.939023 140226673833792 train.py:160] Epoch: [ 2] [18166/61934] time: 31.44s (5762s total) loss: 0.718
+I1206 23:53:45.314688 140226673833792 train.py:160] Epoch: [ 2] [18266/61934] time: 31.38s (5793s total) loss: 0.669
+I1206 23:54:16.757447 140226673833792 train.py:160] Epoch: [ 2] [18366/61934] time: 31.44s (5824s total) loss: 0.588
+I1206 23:54:48.200726 140226673833792 train.py:160] Epoch: [ 2] [18466/61934] time: 31.44s (5856s total) loss: 0.680
+I1206 23:55:19.703440 140226673833792 train.py:160] Epoch: [ 2] [18566/61934] time: 31.50s (5887s total) loss: 0.488
+I1206 23:55:51.130928 140226673833792 train.py:160] Epoch: [ 2] [18666/61934] time: 31.43s (5919s total) loss: 0.633
+I1206 23:56:22.559206 140226673833792 train.py:160] Epoch: [ 2] [18766/61934] time: 31.43s (5950s total) loss: 0.738
+I1206 23:56:53.919000 140226673833792 train.py:160] Epoch: [ 2] [18866/61934] time: 31.36s (5982s total) loss: 0.862
+I1206 23:57:25.311969 140226673833792 train.py:160] Epoch: [ 2] [18966/61934] time: 31.39s (6013s total) loss: 0.799
+I1206 23:57:56.762895 140226673833792 train.py:160] Epoch: [ 2] [19066/61934] time: 31.45s (6044s total) loss: 0.842
+I1206 23:58:28.181118 140226673833792 train.py:160] Epoch: [ 2] [19166/61934] time: 31.42s (6076s total) loss: 0.707
+I1206 23:58:59.611181 140226673833792 train.py:160] Epoch: [ 2] [19266/61934] time: 31.43s (6107s total) loss: 0.717
+I1206 23:59:31.051612 140226673833792 train.py:160] Epoch: [ 2] [19366/61934] time: 31.44s (6139s total) loss: 0.682
+I1207 00:00:02.502429 140226673833792 train.py:160] Epoch: [ 2] [19466/61934] time: 31.45s (6170s total) loss: 0.718
+I1207 00:00:33.909824 140226673833792 train.py:160] Epoch: [ 2] [19566/61934] time: 31.41s (6202s total) loss: 0.883
+I1207 00:01:05.324617 140226673833792 train.py:160] Epoch: [ 2] [19666/61934] time: 31.41s (6233s total) loss: 0.657
+I1207 00:01:36.711806 140226673833792 train.py:160] Epoch: [ 2] [19766/61934] time: 31.39s (6264s total) loss: 0.698
+I1207 00:02:08.100943 140226673833792 train.py:160] Epoch: [ 2] [19866/61934] time: 31.39s (6296s total) loss: 0.718
+I1207 00:02:39.544099 140226673833792 train.py:160] Epoch: [ 2] [19966/61934] time: 31.44s (6327s total) loss: 0.826
+I1207 00:03:11.031217 140226673833792 train.py:160] Epoch: [ 2] [20066/61934] time: 31.49s (6359s total) loss: 0.493
+I1207 00:03:42.406533 140226673833792 train.py:160] Epoch: [ 2] [20166/61934] time: 31.38s (6390s total) loss: 0.613
+I1207 00:04:13.725346 140226673833792 train.py:160] Epoch: [ 2] [20266/61934] time: 31.32s (6421s total) loss: 0.716
+I1207 00:04:45.162190 140226673833792 train.py:160] Epoch: [ 2] [20366/61934] time: 31.44s (6453s total) loss: 0.678
+I1207 00:05:16.636172 140226673833792 train.py:160] Epoch: [ 2] [20466/61934] time: 31.47s (6484s total) loss: 0.786
+I1207 00:05:48.054371 140226673833792 train.py:160] Epoch: [ 2] [20566/61934] time: 31.42s (6516s total) loss: 1.182
+I1207 00:06:19.491193 140226673833792 train.py:160] Epoch: [ 2] [20666/61934] time: 31.44s (6547s total) loss: 0.771
+I1207 00:06:50.876127 140226673833792 train.py:160] Epoch: [ 2] [20766/61934] time: 31.38s (6579s total) loss: 0.632
+I1207 00:07:22.219951 140226673833792 train.py:160] Epoch: [ 2] [20866/61934] time: 31.34s (6610s total) loss: 0.907
+I1207 00:07:53.536351 140226673833792 train.py:160] Epoch: [ 2] [20966/61934] time: 31.32s (6641s total) loss: 0.931
+I1207 00:08:24.923966 140226673833792 train.py:160] Epoch: [ 2] [21066/61934] time: 31.39s (6673s total) loss: 0.677
+I1207 00:08:56.358624 140226673833792 train.py:160] Epoch: [ 2] [21166/61934] time: 31.43s (6704s total) loss: 0.541
+I1207 00:09:27.757277 140226673833792 train.py:160] Epoch: [ 2] [21266/61934] time: 31.40s (6735s total) loss: 0.866
+I1207 00:09:59.160410 140226673833792 train.py:160] Epoch: [ 2] [21366/61934] time: 31.40s (6767s total) loss: 0.918
+I1207 00:10:30.581325 140226673833792 train.py:160] Epoch: [ 2] [21466/61934] time: 31.42s (6798s total) loss: 0.765
+I1207 00:11:01.958796 140226673833792 train.py:160] Epoch: [ 2] [21566/61934] time: 31.38s (6830s total) loss: 0.603
+I1207 00:11:33.318003 140226673833792 train.py:160] Epoch: [ 2] [21666/61934] time: 31.36s (6861s total) loss: 0.851
+I1207 00:12:04.708585 140226673833792 train.py:160] Epoch: [ 2] [21766/61934] time: 31.39s (6892s total) loss: 1.465
+I1207 00:12:36.154342 140226673833792 train.py:160] Epoch: [ 2] [21866/61934] time: 31.45s (6924s total) loss: 0.603
+I1207 00:13:07.542597 140226673833792 train.py:160] Epoch: [ 2] [21966/61934] time: 31.39s (6955s total) loss: 0.965
+I1207 00:13:38.924591 140226673833792 train.py:160] Epoch: [ 2] [22066/61934] time: 31.38s (6987s total) loss: 0.780
+I1207 00:14:10.351732 140226673833792 train.py:160] Epoch: [ 2] [22166/61934] time: 31.43s (7018s total) loss: 0.617
+I1207 00:14:41.742362 140226673833792 train.py:160] Epoch: [ 2] [22266/61934] time: 31.39s (7049s total) loss: 0.897
+I1207 00:15:13.142709 140226673833792 train.py:160] Epoch: [ 2] [22366/61934] time: 31.40s (7081s total) loss: 0.759
+I1207 00:15:44.574616 140226673833792 train.py:160] Epoch: [ 2] [22466/61934] time: 31.43s (7112s total) loss: 0.750
+I1207 00:16:16.047781 140226673833792 train.py:160] Epoch: [ 2] [22566/61934] time: 31.47s (7144s total) loss: 0.666
+I1207 00:16:47.530105 140226673833792 train.py:160] Epoch: [ 2] [22666/61934] time: 31.48s (7175s total) loss: 0.672
+I1207 00:17:18.888006 140226673833792 train.py:160] Epoch: [ 2] [22766/61934] time: 31.36s (7207s total) loss: 0.742
+I1207 00:17:50.256530 140226673833792 train.py:160] Epoch: [ 2] [22866/61934] time: 31.37s (7238s total) loss: 0.737
+I1207 00:18:21.679548 140226673833792 train.py:160] Epoch: [ 2] [22966/61934] time: 31.42s (7269s total) loss: 0.483
+I1207 00:18:53.124736 140226673833792 train.py:160] Epoch: [ 2] [23066/61934] time: 31.45s (7301s total) loss: 0.645
+I1207 00:19:24.561455 140226673833792 train.py:160] Epoch: [ 2] [23166/61934] time: 31.44s (7332s total) loss: 0.562
+I1207 00:19:56.012208 140226673833792 train.py:160] Epoch: [ 2] [23266/61934] time: 31.45s (7364s total) loss: 0.578
+I1207 00:20:27.396572 140226673833792 train.py:160] Epoch: [ 2] [23366/61934] time: 31.38s (7395s total) loss: 0.779
+I1207 00:20:58.825914 140226673833792 train.py:160] Epoch: [ 2] [23466/61934] time: 31.43s (7426s total) loss: 0.695
+I1207 00:21:30.243300 140226673833792 train.py:160] Epoch: [ 2] [23566/61934] time: 31.42s (7458s total) loss: 0.556
+I1207 00:22:01.621268 140226673833792 train.py:160] Epoch: [ 2] [23666/61934] time: 31.38s (7489s total) loss: 0.608
+I1207 00:22:33.087604 140226673833792 train.py:160] Epoch: [ 2] [23766/61934] time: 31.47s (7521s total) loss: 0.882
+I1207 00:23:04.490081 140226673833792 train.py:160] Epoch: [ 2] [23866/61934] time: 31.40s (7552s total) loss: 0.691
+I1207 00:23:35.881691 140226673833792 train.py:160] Epoch: [ 2] [23966/61934] time: 31.39s (7584s total) loss: 0.763
+I1207 00:24:07.345389 140226673833792 train.py:160] Epoch: [ 2] [24066/61934] time: 31.46s (7615s total) loss: 0.755
+I1207 00:24:38.675771 140226673833792 train.py:160] Epoch: [ 2] [24166/61934] time: 31.33s (7646s total) loss: 0.538
+I1207 00:25:10.064981 140226673833792 train.py:160] Epoch: [ 2] [24266/61934] time: 31.39s (7678s total) loss: 0.581
+I1207 00:25:41.465661 140226673833792 train.py:160] Epoch: [ 2] [24366/61934] time: 31.40s (7709s total) loss: 0.719
+I1207 00:26:12.898849 140226673833792 train.py:160] Epoch: [ 2] [24466/61934] time: 31.43s (7741s total) loss: 0.647
+I1207 00:26:44.326394 140226673833792 train.py:160] Epoch: [ 2] [24566/61934] time: 31.43s (7772s total) loss: 0.962
+I1207 00:27:15.756839 140226673833792 train.py:160] Epoch: [ 2] [24666/61934] time: 31.43s (7803s total) loss: 0.704
+I1207 00:27:47.170937 140226673833792 train.py:160] Epoch: [ 2] [24766/61934] time: 31.41s (7835s total) loss: 0.766
+I1207 00:28:18.567962 140226673833792 train.py:160] Epoch: [ 2] [24866/61934] time: 31.40s (7866s total) loss: 0.595
+I1207 00:28:49.948292 140226673833792 train.py:160] Epoch: [ 2] [24966/61934] time: 31.38s (7898s total) loss: 0.691
+I1207 00:29:21.381748 140226673833792 train.py:160] Epoch: [ 2] [25066/61934] time: 31.43s (7929s total) loss: 0.576
+I1207 00:29:52.809340 140226673833792 train.py:160] Epoch: [ 2] [25166/61934] time: 31.43s (7960s total) loss: 1.123
+I1207 00:30:24.173708 140226673833792 train.py:160] Epoch: [ 2] [25266/61934] time: 31.36s (7992s total) loss: 1.448
+I1207 00:30:55.600155 140226673833792 train.py:160] Epoch: [ 2] [25366/61934] time: 31.43s (8023s total) loss: 1.300
+I1207 00:31:27.031908 140226673833792 train.py:160] Epoch: [ 2] [25466/61934] time: 31.43s (8055s total) loss: 0.848
+I1207 00:31:58.346289 140226673833792 train.py:160] Epoch: [ 2] [25566/61934] time: 31.31s (8086s total) loss: 0.625
+I1207 00:32:29.807742 140226673833792 train.py:160] Epoch: [ 2] [25666/61934] time: 31.46s (8117s total) loss: 0.773
+I1207 00:33:01.213303 140226673833792 train.py:160] Epoch: [ 2] [25766/61934] time: 31.41s (8149s total) loss: 0.769
+I1207 00:33:32.648008 140226673833792 train.py:160] Epoch: [ 2] [25866/61934] time: 31.43s (8180s total) loss: 0.485
+I1207 00:34:04.133810 140226673833792 train.py:160] Epoch: [ 2] [25966/61934] time: 31.49s (8212s total) loss: 1.540
+I1207 00:34:35.571448 140226673833792 train.py:160] Epoch: [ 2] [26066/61934] time: 31.44s (8243s total) loss: 0.554
+I1207 00:35:06.990911 140226673833792 train.py:160] Epoch: [ 2] [26166/61934] time: 31.42s (8275s total) loss: 1.702
+I1207 00:35:38.349808 140226673833792 train.py:160] Epoch: [ 2] [26266/61934] time: 31.36s (8306s total) loss: 0.654
+I1207 00:36:09.772724 140226673833792 train.py:160] Epoch: [ 2] [26366/61934] time: 31.42s (8337s total) loss: 0.693
+I1207 00:36:41.200660 140226673833792 train.py:160] Epoch: [ 2] [26466/61934] time: 31.43s (8369s total) loss: 0.787
+I1207 00:37:12.612878 140226673833792 train.py:160] Epoch: [ 2] [26566/61934] time: 31.41s (8400s total) loss: 0.783
+I1207 00:37:43.982607 140226673833792 train.py:160] Epoch: [ 2] [26666/61934] time: 31.37s (8432s total) loss: 0.680
+I1207 00:38:15.483353 140226673833792 train.py:160] Epoch: [ 2] [26766/61934] time: 31.50s (8463s total) loss: 0.516
+I1207 00:38:46.819572 140226673833792 train.py:160] Epoch: [ 2] [26866/61934] time: 31.34s (8494s total) loss: 0.702
+I1207 00:39:18.228100 140226673833792 train.py:160] Epoch: [ 2] [26966/61934] time: 31.41s (8526s total) loss: 0.783
+I1207 00:39:49.611383 140226673833792 train.py:160] Epoch: [ 2] [27066/61934] time: 31.38s (8557s total) loss: 0.807
+I1207 00:40:20.994116 140226673833792 train.py:160] Epoch: [ 2] [27166/61934] time: 31.38s (8589s total) loss: 0.915
+I1207 00:40:52.449621 140226673833792 train.py:160] Epoch: [ 2] [27266/61934] time: 31.46s (8620s total) loss: 0.412
+I1207 00:41:23.890957 140226673833792 train.py:160] Epoch: [ 2] [27366/61934] time: 31.44s (8652s total) loss: 0.697
+I1207 00:41:55.350545 140226673833792 train.py:160] Epoch: [ 2] [27466/61934] time: 31.46s (8683s total) loss: 0.731
+I1207 00:42:26.742325 140226673833792 train.py:160] Epoch: [ 2] [27566/61934] time: 31.39s (8714s total) loss: 0.580
+I1207 00:42:58.171916 140226673833792 train.py:160] Epoch: [ 2] [27666/61934] time: 31.43s (8746s total) loss: 0.500
+I1207 00:43:29.592571 140226673833792 train.py:160] Epoch: [ 2] [27766/61934] time: 31.42s (8777s total) loss: 0.713
+I1207 00:44:01.065788 140226673833792 train.py:160] Epoch: [ 2] [27866/61934] time: 31.47s (8809s total) loss: 0.621
+I1207 00:44:32.540519 140226673833792 train.py:160] Epoch: [ 2] [27966/61934] time: 31.47s (8840s total) loss: 0.461
+I1207 00:45:03.957180 140226673833792 train.py:160] Epoch: [ 2] [28066/61934] time: 31.42s (8872s total) loss: 0.630
+I1207 00:45:35.369990 140226673833792 train.py:160] Epoch: [ 2] [28166/61934] time: 31.41s (8903s total) loss: 0.648
+I1207 00:46:06.771778 140226673833792 train.py:160] Epoch: [ 2] [28266/61934] time: 31.40s (8934s total) loss: 0.865
+I1207 00:46:38.296330 140226673833792 train.py:160] Epoch: [ 2] [28366/61934] time: 31.52s (8966s total) loss: 0.598
+I1207 00:47:09.910562 140226673833792 train.py:160] Epoch: [ 2] [28466/61934] time: 31.61s (8998s total) loss: 0.881
+I1207 00:47:41.564238 140226673833792 train.py:160] Epoch: [ 2] [28566/61934] time: 31.65s (9029s total) loss: 0.769
+I1207 00:48:13.324725 140226673833792 train.py:160] Epoch: [ 2] [28666/61934] time: 31.76s (9061s total) loss: 0.704
+I1207 00:48:44.963887 140226673833792 train.py:160] Epoch: [ 2] [28766/61934] time: 31.64s (9093s total) loss: 0.603
+I1207 00:49:16.746981 140226673833792 train.py:160] Epoch: [ 2] [28866/61934] time: 31.78s (9124s total) loss: 0.666
+I1207 00:49:48.445634 140226673833792 train.py:160] Epoch: [ 2] [28966/61934] time: 31.70s (9156s total) loss: 0.676
+I1207 00:50:20.087391 140226673833792 train.py:160] Epoch: [ 2] [29066/61934] time: 31.64s (9188s total) loss: 0.786
+I1207 00:50:51.815246 140226673833792 train.py:160] Epoch: [ 2] [29166/61934] time: 31.73s (9219s total) loss: 0.690
+I1207 00:51:23.543321 140226673833792 train.py:160] Epoch: [ 2] [29266/61934] time: 31.73s (9251s total) loss: 0.914
+I1207 00:51:55.329131 140226673833792 train.py:160] Epoch: [ 2] [29366/61934] time: 31.79s (9283s total) loss: 0.601
+I1207 00:52:26.946825 140226673833792 train.py:160] Epoch: [ 2] [29466/61934] time: 31.62s (9315s total) loss: 0.660
+I1207 00:52:58.654195 140226673833792 train.py:160] Epoch: [ 2] [29566/61934] time: 31.71s (9346s total) loss: 0.512
+I1207 00:53:30.320960 140226673833792 train.py:160] Epoch: [ 2] [29666/61934] time: 31.67s (9378s total) loss: 0.448
+I1207 00:54:02.026063 140226673833792 train.py:160] Epoch: [ 2] [29766/61934] time: 31.71s (9410s total) loss: 0.975
+I1207 00:54:33.669454 140226673833792 train.py:160] Epoch: [ 2] [29866/61934] time: 31.64s (9441s total) loss: 0.793
+I1207 00:55:05.272311 140226673833792 train.py:160] Epoch: [ 2] [29966/61934] time: 31.60s (9473s total) loss: 0.916
+I1207 00:55:36.861560 140226673833792 train.py:160] Epoch: [ 2] [30066/61934] time: 31.59s (9505s total) loss: 0.729
+I1207 00:56:08.596351 140226673833792 train.py:160] Epoch: [ 2] [30166/61934] time: 31.73s (9536s total) loss: 0.681
+I1207 00:56:40.202732 140226673833792 train.py:160] Epoch: [ 2] [30266/61934] time: 31.61s (9568s total) loss: 0.526
+I1207 00:57:11.998074 140226673833792 train.py:160] Epoch: [ 2] [30366/61934] time: 31.80s (9600s total) loss: 0.540
+I1207 00:57:43.835773 140226673833792 train.py:160] Epoch: [ 2] [30466/61934] time: 31.84s (9631s total) loss: 0.723
+I1207 00:58:15.515490 140226673833792 train.py:160] Epoch: [ 2] [30566/61934] time: 31.68s (9663s total) loss: 0.687
+I1207 00:58:47.157229 140226673833792 train.py:160] Epoch: [ 2] [30666/61934] time: 31.64s (9695s total) loss: 1.076
+I1207 00:59:18.772811 140226673833792 train.py:160] Epoch: [ 2] [30766/61934] time: 31.62s (9726s total) loss: 0.802
+I1207 00:59:50.519896 140226673833792 train.py:160] Epoch: [ 2] [30866/61934] time: 31.75s (9758s total) loss: 0.842
+I1207 01:00:22.268344 140226673833792 train.py:160] Epoch: [ 2] [30966/61934] time: 31.75s (9790s total) loss: 0.911
+I1207 01:00:53.822512 140226673833792 train.py:160] Epoch: [ 2] [31066/61934] time: 31.55s (9821s total) loss: 0.659
+I1207 01:01:25.759588 140226673833792 train.py:160] Epoch: [ 2] [31166/61934] time: 31.94s (9853s total) loss: 0.472
+I1207 01:01:57.462034 140226673833792 train.py:160] Epoch: [ 2] [31266/61934] time: 31.70s (9885s total) loss: 0.654
+I1207 01:02:29.238437 140226673833792 train.py:160] Epoch: [ 2] [31366/61934] time: 31.78s (9917s total) loss: 0.727
+I1207 01:03:00.944341 140226673833792 train.py:160] Epoch: [ 2] [31466/61934] time: 31.71s (9949s total) loss: 0.908
+I1207 01:03:32.637012 140226673833792 train.py:160] Epoch: [ 2] [31566/61934] time: 31.69s (9980s total) loss: 1.104
+I1207 01:04:04.395780 140226673833792 train.py:160] Epoch: [ 2] [31666/61934] time: 31.76s (10012s total) loss: 0.548
+I1207 01:04:35.974521 140226673833792 train.py:160] Epoch: [ 2] [31766/61934] time: 31.58s (10044s total) loss: 1.088
+I1207 01:05:07.687635 140226673833792 train.py:160] Epoch: [ 2] [31866/61934] time: 31.71s (10075s total) loss: 0.639
+I1207 01:05:39.400473 140226673833792 train.py:160] Epoch: [ 2] [31966/61934] time: 31.71s (10107s total) loss: 1.336
+I1207 01:06:11.145251 140226673833792 train.py:160] Epoch: [ 2] [32066/61934] time: 31.74s (10139s total) loss: 0.524
+I1207 01:06:42.772574 140226673833792 train.py:160] Epoch: [ 2] [32166/61934] time: 31.63s (10170s total) loss: 0.600
+I1207 01:07:14.425837 140226673833792 train.py:160] Epoch: [ 2] [32266/61934] time: 31.65s (10202s total) loss: 0.569
+I1207 01:07:46.129306 140226673833792 train.py:160] Epoch: [ 2] [32366/61934] time: 31.70s (10234s total) loss: 0.649
+I1207 01:08:17.982938 140226673833792 train.py:160] Epoch: [ 2] [32466/61934] time: 31.85s (10266s total) loss: 0.745
+I1207 01:08:49.637427 140226673833792 train.py:160] Epoch: [ 2] [32566/61934] time: 31.65s (10297s total) loss: 0.756
+I1207 01:09:21.393724 140226673833792 train.py:160] Epoch: [ 2] [32666/61934] time: 31.76s (10329s total) loss: 0.622
+I1207 01:09:53.116159 140226673833792 train.py:160] Epoch: [ 2] [32766/61934] time: 31.72s (10361s total) loss: 0.712
+I1207 01:10:24.784892 140226673833792 train.py:160] Epoch: [ 2] [32866/61934] time: 31.67s (10392s total) loss: 0.736
+I1207 01:10:56.503419 140226673833792 train.py:160] Epoch: [ 2] [32966/61934] time: 31.72s (10424s total) loss: 0.604
+I1207 01:11:28.205237 140226673833792 train.py:160] Epoch: [ 2] [33066/61934] time: 31.70s (10456s total) loss: 0.543
+I1207 01:11:59.842138 140226673833792 train.py:160] Epoch: [ 2] [33166/61934] time: 31.64s (10487s total) loss: 0.675
+I1207 01:12:31.644404 140226673833792 train.py:160] Epoch: [ 2] [33266/61934] time: 31.80s (10519s total) loss: 0.524
+I1207 01:13:03.465475 140226673833792 train.py:160] Epoch: [ 2] [33366/61934] time: 31.82s (10551s total) loss: 0.558
+I1207 01:13:35.095510 140226673833792 train.py:160] Epoch: [ 2] [33466/61934] time: 31.63s (10583s total) loss: 0.625
+I1207 01:14:06.807296 140226673833792 train.py:160] Epoch: [ 2] [33566/61934] time: 31.71s (10614s total) loss: 0.675
+I1207 01:14:38.365185 140226673833792 train.py:160] Epoch: [ 2] [33666/61934] time: 31.56s (10646s total) loss: 0.899
+I1207 01:15:10.059392 140226673833792 train.py:160] Epoch: [ 2] [33766/61934] time: 31.69s (10678s total) loss: 0.775
+I1207 01:15:41.644140 140226673833792 train.py:160] Epoch: [ 2] [33866/61934] time: 31.58s (10709s total) loss: 0.651
+I1207 01:16:13.451745 140226673833792 train.py:160] Epoch: [ 2] [33966/61934] time: 31.81s (10741s total) loss: 0.876
+I1207 01:16:45.241949 140226673833792 train.py:160] Epoch: [ 2] [34066/61934] time: 31.79s (10773s total) loss: 0.496
+I1207 01:17:16.909336 140226673833792 train.py:160] Epoch: [ 2] [34166/61934] time: 31.67s (10805s total) loss: 0.728
+I1207 01:17:48.678957 140226673833792 train.py:160] Epoch: [ 2] [34266/61934] time: 31.77s (10836s total) loss: 0.620
+I1207 01:18:20.479091 140226673833792 train.py:160] Epoch: [ 2] [34366/61934] time: 31.80s (10868s total) loss: 0.599
+I1207 01:18:52.232619 140226673833792 train.py:160] Epoch: [ 2] [34466/61934] time: 31.75s (10900s total) loss: 1.256
+I1207 01:19:24.038409 140226673833792 train.py:160] Epoch: [ 2] [34566/61934] time: 31.81s (10932s total) loss: 1.179
+I1207 01:19:55.748399 140226673833792 train.py:160] Epoch: [ 2] [34666/61934] time: 31.71s (10963s total) loss: 0.512
+I1207 01:20:27.495452 140226673833792 train.py:160] Epoch: [ 2] [34766/61934] time: 31.75s (10995s total) loss: 0.853
+I1207 01:20:59.117319 140226673833792 train.py:160] Epoch: [ 2] [34866/61934] time: 31.62s (11027s total) loss: 0.710
+I1207 01:21:30.917235 140226673833792 train.py:160] Epoch: [ 2] [34966/61934] time: 31.80s (11059s total) loss: 0.678
+I1207 01:22:02.619285 140226673833792 train.py:160] Epoch: [ 2] [35066/61934] time: 31.70s (11090s total) loss: 0.828
+I1207 01:22:34.307462 140226673833792 train.py:160] Epoch: [ 2] [35166/61934] time: 31.69s (11122s total) loss: 0.787
+I1207 01:23:06.119618 140226673833792 train.py:160] Epoch: [ 2] [35266/61934] time: 31.81s (11154s total) loss: 0.828
+I1207 01:23:37.785556 140226673833792 train.py:160] Epoch: [ 2] [35366/61934] time: 31.67s (11185s total) loss: 0.706
+I1207 01:24:09.463044 140226673833792 train.py:160] Epoch: [ 2] [35466/61934] time: 31.68s (11217s total) loss: 1.350
+I1207 01:24:41.267721 140226673833792 train.py:160] Epoch: [ 2] [35566/61934] time: 31.80s (11249s total) loss: 0.734
+I1207 01:25:12.920266 140226673833792 train.py:160] Epoch: [ 2] [35666/61934] time: 31.65s (11281s total) loss: 0.756
+I1207 01:25:44.578247 140226673833792 train.py:160] Epoch: [ 2] [35766/61934] time: 31.66s (11312s total) loss: 0.730
+I1207 01:26:16.219780 140226673833792 train.py:160] Epoch: [ 2] [35866/61934] time: 31.64s (11344s total) loss: 0.643
+I1207 01:26:47.905889 140226673833792 train.py:160] Epoch: [ 2] [35966/61934] time: 31.69s (11376s total) loss: 0.806
+I1207 01:27:19.662512 140226673833792 train.py:160] Epoch: [ 2] [36066/61934] time: 31.76s (11407s total) loss: 0.560
+I1207 01:27:51.287530 140226673833792 train.py:160] Epoch: [ 2] [36166/61934] time: 31.63s (11439s total) loss: 0.662
+I1207 01:28:22.939204 140226673833792 train.py:160] Epoch: [ 2] [36266/61934] time: 31.65s (11471s total) loss: 0.634
+I1207 01:28:54.566920 140226673833792 train.py:160] Epoch: [ 2] [36366/61934] time: 31.63s (11502s total) loss: 0.659
+I1207 01:29:26.250461 140226673833792 train.py:160] Epoch: [ 2] [36466/61934] time: 31.68s (11534s total) loss: 0.698
+I1207 01:29:57.866525 140226673833792 train.py:160] Epoch: [ 2] [36566/61934] time: 31.62s (11566s total) loss: 0.545
+I1207 01:30:29.647343 140226673833792 train.py:160] Epoch: [ 2] [36666/61934] time: 31.78s (11597s total) loss: 0.722
+I1207 01:31:01.355786 140226673833792 train.py:160] Epoch: [ 2] [36766/61934] time: 31.71s (11629s total) loss: 0.699
+I1207 01:31:33.058414 140226673833792 train.py:160] Epoch: [ 2] [36866/61934] time: 31.70s (11661s total) loss: 0.640
+I1207 01:32:04.842619 140226673833792 train.py:160] Epoch: [ 2] [36966/61934] time: 31.78s (11692s total) loss: 0.629
+I1207 01:32:36.410893 140226673833792 train.py:160] Epoch: [ 2] [37066/61934] time: 31.57s (11724s total) loss: 0.992
+I1207 01:33:08.200419 140226673833792 train.py:160] Epoch: [ 2] [37166/61934] time: 31.79s (11756s total) loss: 0.665
+I1207 01:33:39.876372 140226673833792 train.py:160] Epoch: [ 2] [37266/61934] time: 31.68s (11788s total) loss: 0.553
+I1207 01:34:11.503317 140226673833792 train.py:160] Epoch: [ 2] [37366/61934] time: 31.63s (11819s total) loss: 0.699
+I1207 01:34:43.185551 140226673833792 train.py:160] Epoch: [ 2] [37466/61934] time: 31.68s (11851s total) loss: 0.715
+I1207 01:35:14.873360 140226673833792 train.py:160] Epoch: [ 2] [37566/61934] time: 31.69s (11883s total) loss: 0.666
+I1207 01:35:46.662545 140226673833792 train.py:160] Epoch: [ 2] [37666/61934] time: 31.79s (11914s total) loss: 0.980
+I1207 01:36:18.339907 140226673833792 train.py:160] Epoch: [ 2] [37766/61934] time: 31.68s (11946s total) loss: 0.639
+I1207 01:36:49.973035 140226673833792 train.py:160] Epoch: [ 2] [37866/61934] time: 31.63s (11978s total) loss: 0.767
+I1207 01:37:21.655245 140226673833792 train.py:160] Epoch: [ 2] [37966/61934] time: 31.68s (12009s total) loss: 0.705
+I1207 01:37:53.399312 140226673833792 train.py:160] Epoch: [ 2] [38066/61934] time: 31.74s (12041s total) loss: 0.852
+I1207 01:38:25.199258 140226673833792 train.py:160] Epoch: [ 2] [38166/61934] time: 31.80s (12073s total) loss: 0.766
+I1207 01:38:56.887250 140226673833792 train.py:160] Epoch: [ 2] [38266/61934] time: 31.69s (12105s total) loss: 0.522
+I1207 01:39:28.560315 140226673833792 train.py:160] Epoch: [ 2] [38366/61934] time: 31.67s (12136s total) loss: 0.893
+I1207 01:40:00.330053 140226673833792 train.py:160] Epoch: [ 2] [38466/61934] time: 31.77s (12168s total) loss: 1.172
+I1207 01:40:32.000252 140226673833792 train.py:160] Epoch: [ 2] [38566/61934] time: 31.67s (12200s total) loss: 0.766
+I1207 01:41:03.674964 140226673833792 train.py:160] Epoch: [ 2] [38666/61934] time: 31.67s (12231s total) loss: 0.889
+I1207 01:41:35.417975 140226673833792 train.py:160] Epoch: [ 2] [38766/61934] time: 31.74s (12263s total) loss: 0.628
+I1207 01:42:07.189527 140226673833792 train.py:160] Epoch: [ 2] [38866/61934] time: 31.77s (12295s total) loss: 0.685
+I1207 01:42:38.896262 140226673833792 train.py:160] Epoch: [ 2] [38966/61934] time: 31.71s (12327s total) loss: 0.711
+I1207 01:43:10.593805 140226673833792 train.py:160] Epoch: [ 2] [39066/61934] time: 31.70s (12358s total) loss: 0.640
+I1207 01:43:42.140237 140226673833792 train.py:160] Epoch: [ 2] [39166/61934] time: 31.55s (12390s total) loss: 1.189
+I1207 01:44:13.765230 140226673833792 train.py:160] Epoch: [ 2] [39266/61934] time: 31.62s (12421s total) loss: 0.670
+I1207 01:44:45.424570 140226673833792 train.py:160] Epoch: [ 2] [39366/61934] time: 31.66s (12453s total) loss: 1.070
+I1207 01:45:17.153487 140226673833792 train.py:160] Epoch: [ 2] [39466/61934] time: 31.73s (12485s total) loss: 0.548
+I1207 01:45:48.791229 140226673833792 train.py:160] Epoch: [ 2] [39566/61934] time: 31.64s (12516s total) loss: 0.742
+I1207 01:46:20.390743 140226673833792 train.py:160] Epoch: [ 2] [39666/61934] time: 31.60s (12548s total) loss: 0.436
+I1207 01:46:51.998808 140226673833792 train.py:160] Epoch: [ 2] [39766/61934] time: 31.61s (12580s total) loss: 0.600
+I1207 01:47:23.722533 140226673833792 train.py:160] Epoch: [ 2] [39866/61934] time: 31.72s (12611s total) loss: 0.602
+I1207 01:47:55.288499 140226673833792 train.py:160] Epoch: [ 2] [39966/61934] time: 31.57s (12643s total) loss: 0.990
+I1207 01:48:26.947603 140226673833792 train.py:160] Epoch: [ 2] [40066/61934] time: 31.66s (12675s total) loss: 0.620
+I1207 01:48:58.577550 140226673833792 train.py:160] Epoch: [ 2] [40166/61934] time: 31.63s (12706s total) loss: 0.888
+I1207 01:49:30.275761 140226673833792 train.py:160] Epoch: [ 2] [40266/61934] time: 31.70s (12738s total) loss: 0.804
+I1207 01:50:01.921850 140226673833792 train.py:160] Epoch: [ 2] [40366/61934] time: 31.65s (12770s total) loss: 0.769
+I1207 01:50:33.703002 140226673833792 train.py:160] Epoch: [ 2] [40466/61934] time: 31.78s (12801s total) loss: 0.795
+I1207 01:51:05.420449 140226673833792 train.py:160] Epoch: [ 2] [40566/61934] time: 31.72s (12833s total) loss: 0.791
+I1207 01:51:37.170457 140226673833792 train.py:160] Epoch: [ 2] [40666/61934] time: 31.75s (12865s total) loss: 0.761
+I1207 01:52:08.859920 140226673833792 train.py:160] Epoch: [ 2] [40766/61934] time: 31.69s (12896s total) loss: 0.596
+I1207 01:52:40.652870 140226673833792 train.py:160] Epoch: [ 2] [40866/61934] time: 31.79s (12928s total) loss: 0.588
+I1207 01:53:12.401615 140226673833792 train.py:160] Epoch: [ 2] [40966/61934] time: 31.75s (12960s total) loss: 0.714
+I1207 01:53:44.176222 140226673833792 train.py:160] Epoch: [ 2] [41066/61934] time: 31.77s (12992s total) loss: 0.786
+I1207 01:54:15.881953 140226673833792 train.py:160] Epoch: [ 2] [41166/61934] time: 31.71s (13024s total) loss: 0.613
+I1207 01:54:47.458467 140226673833792 train.py:160] Epoch: [ 2] [41266/61934] time: 31.58s (13055s total) loss: 0.969
+I1207 01:55:19.195678 140226673833792 train.py:160] Epoch: [ 2] [41366/61934] time: 31.74s (13087s total) loss: 0.715
+I1207 01:55:50.945735 140226673833792 train.py:160] Epoch: [ 2] [41466/61934] time: 31.75s (13119s total) loss: 0.718
+I1207 01:56:22.640012 140226673833792 train.py:160] Epoch: [ 2] [41566/61934] time: 31.69s (13150s total) loss: 0.746
+I1207 01:56:54.379112 140226673833792 train.py:160] Epoch: [ 2] [41666/61934] time: 31.74s (13182s total) loss: 0.728
+I1207 01:57:26.030638 140226673833792 train.py:160] Epoch: [ 2] [41766/61934] time: 31.65s (13214s total) loss: 0.659
+I1207 01:57:57.653510 140226673833792 train.py:160] Epoch: [ 2] [41866/61934] time: 31.62s (13245s total) loss: 0.475
+I1207 01:58:29.342816 140226673833792 train.py:160] Epoch: [ 2] [41966/61934] time: 31.69s (13277s total) loss: 0.524
+I1207 01:59:01.095292 140226673833792 train.py:160] Epoch: [ 2] [42066/61934] time: 31.75s (13309s total) loss: 0.755
+I1207 01:59:32.732726 140226673833792 train.py:160] Epoch: [ 2] [42166/61934] time: 31.64s (13340s total) loss: 0.830
+I1207 02:00:04.309504 140226673833792 train.py:160] Epoch: [ 2] [42266/61934] time: 31.58s (13372s total) loss: 0.662
+I1207 02:00:36.100707 140226673833792 train.py:160] Epoch: [ 2] [42366/61934] time: 31.79s (13404s total) loss: 0.761
+I1207 02:01:07.818652 140226673833792 train.py:160] Epoch: [ 2] [42466/61934] time: 31.72s (13435s total) loss: 0.699
+I1207 02:01:39.569048 140226673833792 train.py:160] Epoch: [ 2] [42566/61934] time: 31.75s (13467s total) loss: 0.569
+I1207 02:02:11.198335 140226673833792 train.py:160] Epoch: [ 2] [42666/61934] time: 31.63s (13499s total) loss: 1.031
+I1207 02:02:42.989811 140226673833792 train.py:160] Epoch: [ 2] [42766/61934] time: 31.79s (13531s total) loss: 0.516
+I1207 02:03:14.683658 140226673833792 train.py:160] Epoch: [ 2] [42866/61934] time: 31.69s (13562s total) loss: 0.714
+I1207 02:03:46.364120 140226673833792 train.py:160] Epoch: [ 2] [42966/61934] time: 31.68s (13594s total) loss: 1.158
+I1207 02:04:18.083024 140226673833792 train.py:160] Epoch: [ 2] [43066/61934] time: 31.72s (13626s total) loss: 0.996
+I1207 02:04:49.816557 140226673833792 train.py:160] Epoch: [ 2] [43166/61934] time: 31.73s (13657s total) loss: 0.666
+I1207 02:05:21.573611 140226673833792 train.py:160] Epoch: [ 2] [43266/61934] time: 31.76s (13689s total) loss: 0.743
+I1207 02:05:53.183809 140226673833792 train.py:160] Epoch: [ 2] [43366/61934] time: 31.61s (13721s total) loss: 0.790
+I1207 02:06:24.869915 140226673833792 train.py:160] Epoch: [ 2] [43466/61934] time: 31.69s (13753s total) loss: 0.845
+I1207 02:06:56.592269 140226673833792 train.py:160] Epoch: [ 2] [43566/61934] time: 31.72s (13784s total) loss: 0.931
+I1207 02:07:28.352009 140226673833792 train.py:160] Epoch: [ 2] [43666/61934] time: 31.76s (13816s total) loss: 0.939
+I1207 02:08:00.132064 140226673833792 train.py:160] Epoch: [ 2] [43766/61934] time: 31.78s (13848s total) loss: 0.791
+I1207 02:08:31.849590 140226673833792 train.py:160] Epoch: [ 2] [43866/61934] time: 31.72s (13879s total) loss: 0.439
+I1207 02:09:03.574150 140226673833792 train.py:160] Epoch: [ 2] [43966/61934] time: 31.72s (13911s total) loss: 0.450
+I1207 02:09:35.282479 140226673833792 train.py:160] Epoch: [ 2] [44066/61934] time: 31.71s (13943s total) loss: 0.633
+I1207 02:10:06.856024 140226673833792 train.py:160] Epoch: [ 2] [44166/61934] time: 31.57s (13974s total) loss: 0.587
+I1207 02:10:38.494939 140226673833792 train.py:160] Epoch: [ 2] [44266/61934] time: 31.64s (14006s total) loss: 0.909
+I1207 02:11:10.265745 140226673833792 train.py:160] Epoch: [ 2] [44366/61934] time: 31.77s (14038s total) loss: 1.552
+I1207 02:11:42.013910 140226673833792 train.py:160] Epoch: [ 2] [44466/61934] time: 31.75s (14070s total) loss: 0.526
+I1207 02:12:13.744488 140226673833792 train.py:160] Epoch: [ 2] [44566/61934] time: 31.73s (14101s total) loss: 0.655
+I1207 02:12:45.493674 140226673833792 train.py:160] Epoch: [ 2] [44666/61934] time: 31.75s (14133s total) loss: 0.694
+I1207 02:13:17.269933 140226673833792 train.py:160] Epoch: [ 2] [44766/61934] time: 31.78s (14165s total) loss: 0.845
+I1207 02:13:48.991152 140226673833792 train.py:160] Epoch: [ 2] [44866/61934] time: 31.72s (14197s total) loss: 0.761
+I1207 02:14:20.674067 140226673833792 train.py:160] Epoch: [ 2] [44966/61934] time: 31.68s (14228s total) loss: 0.603
+I1207 02:14:52.258390 140226673833792 train.py:160] Epoch: [ 2] [45066/61934] time: 31.58s (14260s total) loss: 0.675
+I1207 02:15:23.886406 140226673833792 train.py:160] Epoch: [ 2] [45166/61934] time: 31.63s (14292s total) loss: 0.619
+I1207 02:15:55.567286 140226673833792 train.py:160] Epoch: [ 2] [45266/61934] time: 31.68s (14323s total) loss: 0.741
+I1207 02:16:27.195435 140226673833792 train.py:160] Epoch: [ 2] [45366/61934] time: 31.63s (14355s total) loss: 0.655
+I1207 02:16:58.861225 140226673833792 train.py:160] Epoch: [ 2] [45466/61934] time: 31.67s (14386s total) loss: 0.632
+I1207 02:17:30.522740 140226673833792 train.py:160] Epoch: [ 2] [45566/61934] time: 31.66s (14418s total) loss: 0.883
+I1207 02:18:02.215641 140226673833792 train.py:160] Epoch: [ 2] [45666/61934] time: 31.69s (14450s total) loss: 0.716
+I1207 02:18:33.924403 140226673833792 train.py:160] Epoch: [ 2] [45766/61934] time: 31.71s (14482s total) loss: 0.881
+I1207 02:19:05.700032 140226673833792 train.py:160] Epoch: [ 2] [45866/61934] time: 31.78s (14513s total) loss: 0.643
+I1207 02:19:37.455790 140226673833792 train.py:160] Epoch: [ 2] [45966/61934] time: 31.76s (14545s total) loss: 1.027
+I1207 02:20:09.203402 140226673833792 train.py:160] Epoch: [ 2] [46066/61934] time: 31.75s (14577s total) loss: 0.711
+I1207 02:20:40.856827 140226673833792 train.py:160] Epoch: [ 2] [46166/61934] time: 31.65s (14608s total) loss: 0.805
+I1207 02:21:12.521232 140226673833792 train.py:160] Epoch: [ 2] [46266/61934] time: 31.66s (14640s total) loss: 0.891
+I1207 02:21:44.315529 140226673833792 train.py:160] Epoch: [ 2] [46366/61934] time: 31.79s (14672s total) loss: 0.475
+I1207 02:22:15.977466 140226673833792 train.py:160] Epoch: [ 2] [46466/61934] time: 31.66s (14704s total) loss: 0.725
+I1207 02:22:47.649638 140226673833792 train.py:160] Epoch: [ 2] [46566/61934] time: 31.67s (14735s total) loss: 0.695
+I1207 02:23:19.368452 140226673833792 train.py:160] Epoch: [ 2] [46666/61934] time: 31.72s (14767s total) loss: 0.703
+I1207 02:23:51.026544 140226673833792 train.py:160] Epoch: [ 2] [46766/61934] time: 31.66s (14799s total) loss: 0.788
+I1207 02:24:22.621825 140226673833792 train.py:160] Epoch: [ 2] [46866/61934] time: 31.60s (14830s total) loss: 0.571
+I1207 02:24:54.284014 140226673833792 train.py:160] Epoch: [ 2] [46966/61934] time: 31.66s (14862s total) loss: 0.755
+I1207 02:25:25.974774 140226673833792 train.py:160] Epoch: [ 2] [47066/61934] time: 31.69s (14894s total) loss: 0.469
+I1207 02:25:57.609815 140226673833792 train.py:160] Epoch: [ 2] [47166/61934] time: 31.64s (14925s total) loss: 0.535
+I1207 02:26:29.315784 140226673833792 train.py:160] Epoch: [ 2] [47266/61934] time: 31.71s (14957s total) loss: 0.527
+I1207 02:27:01.065806 140226673833792 train.py:160] Epoch: [ 2] [47366/61934] time: 31.75s (14989s total) loss: 0.774
+I1207 02:27:32.752765 140226673833792 train.py:160] Epoch: [ 2] [47466/61934] time: 31.69s (15020s total) loss: 0.573
+I1207 02:28:04.494406 140226673833792 train.py:160] Epoch: [ 2] [47566/61934] time: 31.74s (15052s total) loss: 0.516
+I1207 02:28:36.178667 140226673833792 train.py:160] Epoch: [ 2] [47666/61934] time: 31.68s (15084s total) loss: 0.545
+I1207 02:29:07.882786 140226673833792 train.py:160] Epoch: [ 2] [47766/61934] time: 31.70s (15116s total) loss: 0.672
+I1207 02:29:39.615864 140226673833792 train.py:160] Epoch: [ 2] [47866/61934] time: 31.73s (15147s total) loss: 0.660
+I1207 02:30:11.391173 140226673833792 train.py:160] Epoch: [ 2] [47966/61934] time: 31.78s (15179s total) loss: 0.511
+I1207 02:30:43.087782 140226673833792 train.py:160] Epoch: [ 2] [48066/61934] time: 31.70s (15211s total) loss: 0.573
+I1207 02:31:14.887413 140226673833792 train.py:160] Epoch: [ 2] [48166/61934] time: 31.80s (15243s total) loss: 1.083
+I1207 02:31:46.608224 140226673833792 train.py:160] Epoch: [ 2] [48266/61934] time: 31.72s (15274s total) loss: 0.607
+I1207 02:32:18.264978 140226673833792 train.py:160] Epoch: [ 2] [48366/61934] time: 31.66s (15306s total) loss: 0.865
+I1207 02:32:49.876590 140226673833792 train.py:160] Epoch: [ 2] [48466/61934] time: 31.61s (15338s total) loss: 0.675
+I1207 02:33:21.644351 140226673833792 train.py:160] Epoch: [ 2] [48566/61934] time: 31.77s (15369s total) loss: 0.645
+I1207 02:33:53.294454 140226673833792 train.py:160] Epoch: [ 2] [48666/61934] time: 31.65s (15401s total) loss: 0.974
+I1207 02:34:24.977400 140226673833792 train.py:160] Epoch: [ 2] [48766/61934] time: 31.68s (15433s total) loss: 0.867
+I1207 02:34:56.559367 140226673833792 train.py:160] Epoch: [ 2] [48866/61934] time: 31.58s (15464s total) loss: 0.677
+I1207 02:35:28.320122 140226673833792 train.py:160] Epoch: [ 2] [48966/61934] time: 31.76s (15496s total) loss: 0.639
+I1207 02:35:59.993278 140226673833792 train.py:160] Epoch: [ 2] [49066/61934] time: 31.67s (15528s total) loss: 1.483
+I1207 02:36:31.703603 140226673833792 train.py:160] Epoch: [ 2] [49166/61934] time: 31.71s (15559s total) loss: 0.727
+I1207 02:37:03.476882 140226673833792 train.py:160] Epoch: [ 2] [49266/61934] time: 31.77s (15591s total) loss: 0.671
+I1207 02:37:35.137215 140226673833792 train.py:160] Epoch: [ 2] [49366/61934] time: 31.66s (15623s total) loss: 0.758
+I1207 02:38:06.835185 140226673833792 train.py:160] Epoch: [ 2] [49466/61934] time: 31.70s (15654s total) loss: 0.758
+I1207 02:38:38.512910 140226673833792 train.py:160] Epoch: [ 2] [49566/61934] time: 31.68s (15686s total) loss: 0.678
+I1207 02:39:10.235070 140226673833792 train.py:160] Epoch: [ 2] [49666/61934] time: 31.72s (15718s total) loss: 0.754
+I1207 02:39:41.929207 140226673833792 train.py:160] Epoch: [ 2] [49766/61934] time: 31.69s (15750s total) loss: 0.676
+I1207 02:40:13.589409 140226673833792 train.py:160] Epoch: [ 2] [49866/61934] time: 31.66s (15781s total) loss: 0.918
+I1207 02:40:45.252893 140226673833792 train.py:160] Epoch: [ 2] [49966/61934] time: 31.66s (15813s total) loss: 1.034
+I1207 02:41:17.091079 140226673833792 train.py:160] Epoch: [ 2] [50066/61934] time: 31.84s (15845s total) loss: 0.816
+I1207 02:41:48.809874 140226673833792 train.py:160] Epoch: [ 2] [50166/61934] time: 31.72s (15876s total) loss: 0.927
+I1207 02:42:20.492843 140226673833792 train.py:160] Epoch: [ 2] [50266/61934] time: 31.68s (15908s total) loss: 0.833
+I1207 02:42:52.176009 140226673833792 train.py:160] Epoch: [ 2] [50366/61934] time: 31.68s (15940s total) loss: 0.739
+I1207 02:43:23.912487 140226673833792 train.py:160] Epoch: [ 2] [50466/61934] time: 31.74s (15972s total) loss: 0.763
+I1207 02:43:55.650135 140226673833792 train.py:160] Epoch: [ 2] [50566/61934] time: 31.74s (16003s total) loss: 0.833
+I1207 02:44:27.356378 140226673833792 train.py:160] Epoch: [ 2] [50666/61934] time: 31.71s (16035s total) loss: 0.835
+I1207 02:44:59.048310 140226673833792 train.py:160] Epoch: [ 2] [50766/61934] time: 31.69s (16067s total) loss: 0.674
+I1207 02:45:30.685840 140226673833792 train.py:160] Epoch: [ 2] [50866/61934] time: 31.64s (16098s total) loss: 0.853
+I1207 02:46:02.438344 140226673833792 train.py:160] Epoch: [ 2] [50966/61934] time: 31.75s (16130s total) loss: 0.425
+I1207 02:46:34.105706 140226673833792 train.py:160] Epoch: [ 2] [51066/61934] time: 31.67s (16162s total) loss: 0.610
+I1207 02:47:05.733386 140226673833792 train.py:160] Epoch: [ 2] [51166/61934] time: 31.63s (16193s total) loss: 0.828
+I1207 02:47:37.379215 140226673833792 train.py:160] Epoch: [ 2] [51266/61934] time: 31.65s (16225s total) loss: 0.723
+I1207 02:48:09.126307 140226673833792 train.py:160] Epoch: [ 2] [51366/61934] time: 31.75s (16257s total) loss: 0.588
+I1207 02:48:40.833973 140226673833792 train.py:160] Epoch: [ 2] [51466/61934] time: 31.71s (16288s total) loss: 0.506
+I1207 02:49:12.547033 140226673833792 train.py:160] Epoch: [ 2] [51566/61934] time: 31.71s (16320s total) loss: 0.614
+I1207 02:49:44.318140 140226673833792 train.py:160] Epoch: [ 2] [51666/61934] time: 31.77s (16352s total) loss: 0.709
+I1207 02:50:16.132301 140226673833792 train.py:160] Epoch: [ 2] [51766/61934] time: 31.81s (16384s total) loss: 0.570
+I1207 02:50:47.871636 140226673833792 train.py:160] Epoch: [ 2] [51866/61934] time: 31.74s (16416s total) loss: 0.717
+I1207 02:51:19.566272 140226673833792 train.py:160] Epoch: [ 2] [51966/61934] time: 31.69s (16447s total) loss: 0.702
+I1207 02:51:51.218877 140226673833792 train.py:160] Epoch: [ 2] [52066/61934] time: 31.65s (16479s total) loss: 0.809
+I1207 02:52:22.964297 140226673833792 train.py:160] Epoch: [ 2] [52166/61934] time: 31.75s (16511s total) loss: 0.609
+I1207 02:52:54.539623 140226673833792 train.py:160] Epoch: [ 2] [52266/61934] time: 31.58s (16542s total) loss: 0.759
+I1207 02:53:26.311522 140226673833792 train.py:160] Epoch: [ 2] [52366/61934] time: 31.77s (16574s total) loss: 1.270
+I1207 02:53:58.070964 140226673833792 train.py:160] Epoch: [ 2] [52466/61934] time: 31.76s (16606s total) loss: 0.893
+I1207 02:54:29.776911 140226673833792 train.py:160] Epoch: [ 2] [52566/61934] time: 31.71s (16637s total) loss: 0.691
+I1207 02:55:01.386030 140226673833792 train.py:160] Epoch: [ 2] [52666/61934] time: 31.61s (16669s total) loss: 0.619
+I1207 02:55:33.093952 140226673833792 train.py:160] Epoch: [ 2] [52766/61934] time: 31.71s (16701s total) loss: 0.627
+I1207 02:56:04.965766 140226673833792 train.py:160] Epoch: [ 2] [52866/61934] time: 31.87s (16733s total) loss: 0.921
+I1207 02:56:36.620704 140226673833792 train.py:160] Epoch: [ 2] [52966/61934] time: 31.65s (16764s total) loss: 0.768
+I1207 02:57:08.290583 140226673833792 train.py:160] Epoch: [ 2] [53066/61934] time: 31.67s (16796s total) loss: 0.753
+I1207 02:57:40.167984 140226673833792 train.py:160] Epoch: [ 2] [53166/61934] time: 31.88s (16828s total) loss: 1.121
+I1207 02:58:11.910009 140226673833792 train.py:160] Epoch: [ 2] [53266/61934] time: 31.74s (16860s total) loss: 0.910
+I1207 02:58:43.623860 140226673833792 train.py:160] Epoch: [ 2] [53366/61934] time: 31.71s (16891s total) loss: 0.772
+I1207 02:59:15.272227 140226673833792 train.py:160] Epoch: [ 2] [53466/61934] time: 31.65s (16923s total) loss: 0.662
+I1207 02:59:46.822901 140226673833792 train.py:160] Epoch: [ 2] [53566/61934] time: 31.55s (16954s total) loss: 0.909
+I1207 03:00:18.473061 140226673833792 train.py:160] Epoch: [ 2] [53666/61934] time: 31.65s (16986s total) loss: 0.840
+I1207 03:00:50.356020 140226673833792 train.py:160] Epoch: [ 2] [53766/61934] time: 31.88s (17018s total) loss: 0.555
+I1207 03:01:22.043577 140226673833792 train.py:160] Epoch: [ 2] [53866/61934] time: 31.69s (17050s total) loss: 0.911
+I1207 03:01:53.837638 140226673833792 train.py:160] Epoch: [ 2] [53966/61934] time: 31.79s (17081s total) loss: 0.847
+I1207 03:02:25.620718 140226673833792 train.py:160] Epoch: [ 2] [54066/61934] time: 31.78s (17113s total) loss: 0.625
+I1207 03:02:57.240672 140226673833792 train.py:160] Epoch: [ 2] [54166/61934] time: 31.62s (17145s total) loss: 0.800
+I1207 03:03:28.873757 140226673833792 train.py:160] Epoch: [ 2] [54266/61934] time: 31.63s (17177s total) loss: 0.810
+I1207 03:04:00.511028 140226673833792 train.py:160] Epoch: [ 2] [54366/61934] time: 31.64s (17208s total) loss: 0.629
+I1207 03:04:32.199121 140226673833792 train.py:160] Epoch: [ 2] [54466/61934] time: 31.69s (17240s total) loss: 0.689
+I1207 03:05:04.017677 140226673833792 train.py:160] Epoch: [ 2] [54566/61934] time: 31.82s (17272s total) loss: 0.678
+I1207 03:05:35.662982 140226673833792 train.py:160] Epoch: [ 2] [54666/61934] time: 31.65s (17303s total) loss: 0.822
+I1207 03:06:07.380593 140226673833792 train.py:160] Epoch: [ 2] [54766/61934] time: 31.72s (17335s total) loss: 0.893
+I1207 03:06:38.903474 140226673833792 train.py:160] Epoch: [ 2] [54866/61934] time: 31.52s (17367s total) loss: 0.687
+I1207 03:07:10.521112 140226673833792 train.py:160] Epoch: [ 2] [54966/61934] time: 31.62s (17398s total) loss: 0.657
+I1207 03:07:42.161690 140226673833792 train.py:160] Epoch: [ 2] [55066/61934] time: 31.64s (17430s total) loss: 0.679
+I1207 03:08:13.862799 140226673833792 train.py:160] Epoch: [ 2] [55166/61934] time: 31.70s (17462s total) loss: 0.500
+I1207 03:08:45.570438 140226673833792 train.py:160] Epoch: [ 2] [55266/61934] time: 31.71s (17493s total) loss: 0.664
+I1207 03:09:17.220249 140226673833792 train.py:160] Epoch: [ 2] [55366/61934] time: 31.65s (17525s total) loss: 0.866
+I1207 03:09:48.936823 140226673833792 train.py:160] Epoch: [ 2] [55466/61934] time: 31.72s (17557s total) loss: 0.942
+I1207 03:10:20.507373 140226673833792 train.py:160] Epoch: [ 2] [55566/61934] time: 31.57s (17588s total) loss: 0.622
+I1207 03:10:52.201569 140226673833792 train.py:160] Epoch: [ 2] [55666/61934] time: 31.69s (17620s total) loss: 0.814
+I1207 03:11:24.062906 140226673833792 train.py:160] Epoch: [ 2] [55766/61934] time: 31.86s (17652s total) loss: 0.621
+I1207 03:11:55.901256 140226673833792 train.py:160] Epoch: [ 2] [55866/61934] time: 31.84s (17684s total) loss: 0.695
+I1207 03:12:27.689954 140226673833792 train.py:160] Epoch: [ 2] [55966/61934] time: 31.79s (17715s total) loss: 0.604
+I1207 03:12:59.459939 140226673833792 train.py:160] Epoch: [ 2] [56066/61934] time: 31.77s (17747s total) loss: 0.474
+I1207 03:13:31.151481 140226673833792 train.py:160] Epoch: [ 2] [56166/61934] time: 31.69s (17779s total) loss: 0.802
+I1207 03:14:02.796840 140226673833792 train.py:160] Epoch: [ 2] [56266/61934] time: 31.65s (17810s total) loss: 0.535
+I1207 03:14:34.619705 140226673833792 train.py:160] Epoch: [ 2] [56366/61934] time: 31.82s (17842s total) loss: 0.632
+I1207 03:15:06.340907 140226673833792 train.py:160] Epoch: [ 2] [56466/61934] time: 31.72s (17874s total) loss: 0.668
+I1207 03:15:38.025049 140226673833792 train.py:160] Epoch: [ 2] [56566/61934] time: 31.68s (17906s total) loss: 0.627
+I1207 03:16:09.640939 140226673833792 train.py:160] Epoch: [ 2] [56666/61934] time: 31.62s (17937s total) loss: 0.788
+I1207 03:16:41.409702 140226673833792 train.py:160] Epoch: [ 2] [56766/61934] time: 31.77s (17969s total) loss: 0.629
+I1207 03:17:13.050517 140226673833792 train.py:160] Epoch: [ 2] [56866/61934] time: 31.64s (18001s total) loss: 0.619
+I1207 03:17:44.583450 140226673833792 train.py:160] Epoch: [ 2] [56966/61934] time: 31.53s (18032s total) loss: 0.719
+I1207 03:18:16.291722 140226673833792 train.py:160] Epoch: [ 2] [57066/61934] time: 31.71s (18064s total) loss: 0.784
+I1207 03:18:47.912982 140226673833792 train.py:160] Epoch: [ 2] [57166/61934] time: 31.62s (18096s total) loss: 0.721
+I1207 03:19:19.644782 140226673833792 train.py:160] Epoch: [ 2] [57266/61934] time: 31.73s (18127s total) loss: 0.563
+I1207 03:19:51.398841 140226673833792 train.py:160] Epoch: [ 2] [57366/61934] time: 31.75s (18159s total) loss: 0.939
+I1207 03:20:23.141947 140226673833792 train.py:160] Epoch: [ 2] [57466/61934] time: 31.74s (18191s total) loss: 0.674
+I1207 03:20:54.893370 140226673833792 train.py:160] Epoch: [ 2] [57566/61934] time: 31.75s (18223s total) loss: 0.733
+I1207 03:21:26.505235 140226673833792 train.py:160] Epoch: [ 2] [57666/61934] time: 31.61s (18254s total) loss: 0.771
+I1207 03:21:58.247051 140226673833792 train.py:160] Epoch: [ 2] [57766/61934] time: 31.74s (18286s total) loss: 0.655
+I1207 03:22:29.892240 140226673833792 train.py:160] Epoch: [ 2] [57866/61934] time: 31.65s (18318s total) loss: 0.368
+I1207 03:23:01.542462 140226673833792 train.py:160] Epoch: [ 2] [57966/61934] time: 31.65s (18349s total) loss: 1.283
+I1207 03:23:33.226854 140226673833792 train.py:160] Epoch: [ 2] [58066/61934] time: 31.68s (18381s total) loss: 0.639
+I1207 03:24:04.877094 140226673833792 train.py:160] Epoch: [ 2] [58166/61934] time: 31.65s (18413s total) loss: 0.691
+I1207 03:24:36.571490 140226673833792 train.py:160] Epoch: [ 2] [58266/61934] time: 31.69s (18444s total) loss: 0.657
+I1207 03:25:08.273390 140226673833792 train.py:160] Epoch: [ 2] [58366/61934] time: 31.70s (18476s total) loss: 0.781
+I1207 03:25:39.926395 140226673833792 train.py:160] Epoch: [ 2] [58466/61934] time: 31.65s (18508s total) loss: 0.574
+I1207 03:26:11.657872 140226673833792 train.py:160] Epoch: [ 2] [58566/61934] time: 31.73s (18539s total) loss: 0.542
+I1207 03:26:43.308830 140226673833792 train.py:160] Epoch: [ 2] [58666/61934] time: 31.65s (18571s total) loss: 0.636
+I1207 03:27:15.089442 140226673833792 train.py:160] Epoch: [ 2] [58766/61934] time: 31.78s (18603s total) loss: 0.714
+I1207 03:27:46.836340 140226673833792 train.py:160] Epoch: [ 2] [58866/61934] time: 31.75s (18634s total) loss: 0.679
+I1207 03:28:18.483610 140226673833792 train.py:160] Epoch: [ 2] [58966/61934] time: 31.65s (18666s total) loss: 0.591
+I1207 03:28:50.137727 140226673833792 train.py:160] Epoch: [ 2] [59066/61934] time: 31.65s (18698s total) loss: 0.502
+I1207 03:29:22.082175 140226673833792 train.py:160] Epoch: [ 2] [59166/61934] time: 31.94s (18730s total) loss: 0.502
+I1207 03:29:53.936056 140226673833792 train.py:160] Epoch: [ 2] [59266/61934] time: 31.85s (18762s total) loss: 0.630
+I1207 03:30:25.622756 140226673833792 train.py:160] Epoch: [ 2] [59366/61934] time: 31.69s (18793s total) loss: 0.627
+I1207 03:30:57.378068 140226673833792 train.py:160] Epoch: [ 2] [59466/61934] time: 31.76s (18825s total) loss: 0.588
+I1207 03:31:28.953924 140226673833792 train.py:160] Epoch: [ 2] [59566/61934] time: 31.58s (18857s total) loss: 0.956
+I1207 03:32:00.761941 140226673833792 train.py:160] Epoch: [ 2] [59666/61934] time: 31.81s (18888s total) loss: 0.601
+I1207 03:32:32.489372 140226673833792 train.py:160] Epoch: [ 2] [59766/61934] time: 31.73s (18920s total) loss: 0.662
+I1207 03:33:04.121474 140226673833792 train.py:160] Epoch: [ 2] [59866/61934] time: 31.63s (18952s total) loss: 0.703
+I1207 03:33:35.900223 140226673833792 train.py:160] Epoch: [ 2] [59966/61934] time: 31.78s (18984s total) loss: 0.835
+I1207 03:34:07.680360 140226673833792 train.py:160] Epoch: [ 2] [60066/61934] time: 31.78s (19015s total) loss: 0.483
+I1207 03:34:39.434288 140226673833792 train.py:160] Epoch: [ 2] [60166/61934] time: 31.75s (19047s total) loss: 0.821
+I1207 03:35:11.209012 140226673833792 train.py:160] Epoch: [ 2] [60266/61934] time: 31.77s (19079s total) loss: 0.803
+I1207 03:35:42.969359 140226673833792 train.py:160] Epoch: [ 2] [60366/61934] time: 31.76s (19111s total) loss: 0.776
+I1207 03:36:14.742519 140226673833792 train.py:160] Epoch: [ 2] [60466/61934] time: 31.77s (19142s total) loss: 0.502
+I1207 03:36:46.512084 140226673833792 train.py:160] Epoch: [ 2] [60566/61934] time: 31.77s (19174s total) loss: 0.887
+I1207 03:37:18.233193 140226673833792 train.py:160] Epoch: [ 2] [60666/61934] time: 31.72s (19206s total) loss: 0.463
+I1207 03:37:49.855823 140226673833792 train.py:160] Epoch: [ 2] [60766/61934] time: 31.62s (19237s total) loss: 0.522
+I1207 03:38:21.484184 140226673833792 train.py:160] Epoch: [ 2] [60866/61934] time: 31.63s (19269s total) loss: 0.875
+I1207 03:38:53.264303 140226673833792 train.py:160] Epoch: [ 2] [60966/61934] time: 31.78s (19301s total) loss: 0.559
+I1207 03:39:25.097890 140226673833792 train.py:160] Epoch: [ 2] [61066/61934] time: 31.83s (19333s total) loss: 0.751
+I1207 03:39:56.767835 140226673833792 train.py:160] Epoch: [ 2] [61166/61934] time: 31.67s (19364s total) loss: 0.823
+I1207 03:40:28.432914 140226673833792 train.py:160] Epoch: [ 2] [61266/61934] time: 31.67s (19396s total) loss: 0.680
+I1207 03:41:00.168556 140226673833792 train.py:160] Epoch: [ 2] [61366/61934] time: 31.74s (19428s total) loss: 1.768
+I1207 03:41:31.588788 140226673833792 train.py:160] Epoch: [ 2] [61466/61934] time: 31.42s (19459s total) loss: 0.833
+I1207 03:42:03.005237 140226673833792 train.py:160] Epoch: [ 2] [61566/61934] time: 31.42s (19491s total) loss: 0.693
+I1207 03:42:34.441227 140226673833792 train.py:160] Epoch: [ 2] [61666/61934] time: 31.44s (19522s total) loss: 0.575
+I1207 03:43:05.869631 140226673833792 train.py:160] Epoch: [ 2] [61766/61934] time: 31.43s (19554s total) loss: 0.863
+I1207 03:43:37.301921 140226673833792 train.py:160] Epoch: [ 2] [61866/61934] time: 31.43s (19585s total) loss: 0.671
+I1207 03:43:58.538419 140226673833792 train.py:163] [*] Saving checkpoint to /home/pachipala/vid2depth/checkpoints...
+I1207 03:44:11.517468 140226673833792 train.py:160] Epoch: [ 3] [   32/61934] time: 34.22s (19619s total) loss: 0.637
+I1207 03:44:42.963379 140226673833792 train.py:160] Epoch: [ 3] [  132/61934] time: 31.45s (19651s total) loss: 1.371

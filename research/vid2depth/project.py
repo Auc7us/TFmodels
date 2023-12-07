@@ -46,7 +46,10 @@ def inverse_warp(img, depth, egomotion, intrinsic_mat, intrinsic_mat_inv):
   grid = _meshgrid_abs(img_height, img_width)
   grid = tf.tile(tf.expand_dims(grid, 0), [batch_size, 1, 1])
   cam_coords = _pixel2cam(depth, grid, intrinsic_mat_inv)
-  ones = tf.ones([batch_size, 1, img_height * img_width])
+  ones_shape = tf.stack([batch_size, 1, img_height * img_width])
+  ones = tf.ones(ones_shape, dtype=tf.float32)
+
+#ones = tf.ones([batch_size, 1, img_height * img_width])
   cam_coords_hom = tf.concat([cam_coords, ones], axis=1)
   egomotion_mat = _egomotion_vec2mat(egomotion, batch_size)
 
