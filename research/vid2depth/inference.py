@@ -46,6 +46,8 @@ import numpy as np
 import scipy.misc
 import tensorflow as tf
 import util
+import imageio
+from PIL import Image
 
 gfile = tf.gfile
 
@@ -109,8 +111,11 @@ def _run_inference():
         idx = i + b
         if idx >= len(im_files):
           break
-        im = scipy.misc.imread(im_files[idx])
-        inputs[b] = scipy.misc.imresize(im, (FLAGS.img_height, FLAGS.img_width))
+        # im = scipy.misc.imread(im_files[idx])
+        im = imageio.imread(im_files[idx])
+        im_pil = Image.fromarray(im)
+        inputs[b] = np.array(im_pil.resize((FLAGS.img_width, FLAGS.img_height)))
+        # inputs[b] = scipy.misc.imresize(im, (FLAGS.img_height, FLAGS.img_width))
       results = inference_model.inference(inputs, sess, mode='depth')
       for b in range(FLAGS.batch_size):
         idx = i + b
@@ -125,7 +130,8 @@ def _run_inference():
         colored_map = _normalize_depth_for_display(depth_map, cmap=CMAP)
         input_float = inputs[b].astype(np.float32) / 255.0
         vertical_stack = np.concatenate((input_float, colored_map), axis=0)
-        scipy.misc.imsave(depth_path, vertical_stack)
+        imageio.imwrite(depth_path, vertical_stack)
+        # scipy.misc.imsave(depth_path, vertical_stack)
 
 
 def _gray2rgb(im, cmap=CMAP):
