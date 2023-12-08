@@ -1,9 +1,9 @@
-![TensorFlow Requirement: 1.x](https://img.shields.io/badge/TensorFlow%20Requirement-1.x-brightgreen)
+![TensorFlow Requirement: 1.15](https://img.shields.io/badge/TensorFlow%20Requirement-1.15-brightgreen)
 ![TensorFlow 2 Not Supported](https://img.shields.io/badge/TensorFlow%202%20Not%20Supported-%E2%9C%95-red.svg)
 
-# vid2depth
+# Meta Learning on vid2depth
 
-**Unsupervised Learning of Depth and Ego-Motion from Monocular Video Using 3D Geometric Constraints**
+**vid2depth = Unsupervised Learning of Depth and Ego-Motion from Monocular Video Using 3D Geometric Constraints**
 
 Reza Mahjourian, Martin Wicke, Anelia Angelova
 
@@ -21,10 +21,6 @@ ArXiv: [https://arxiv.org/pdf/1802.05522.pdf](https://arxiv.org/pdf/1802.05522.p
 <a href="https://sites.google.com/view/vid2depth"><img src='https://storage.googleapis.com/vid2depth/media/approach.png' width=400></a>
 </p>
 
-## Update: TF2 version.
-
-Please see [https://github.com/IAMAl/vid2depth_tf2](https://github.com/IAMAl/vid2depth_tf2)
-for a TF2 implementation of vid2depth.
 
 ## 1. Installation
 
@@ -33,23 +29,21 @@ for a TF2 implementation of vid2depth.
 #### Python Packages
 
 ```shell
-mkvirtualenv venv  # Optionally create a virtual environment.
-pip install absl-py
-pip install matplotlib
-pip install numpy
-pip install scipy
-pip install tensorflow
+conda create -n venv python=3.7 # Recommended: create a virtual environment.
+conda install numpy=1.18.5
+conda install matplotlib
+conda install tensorflow-gpu=1.15
 ```
 
 ### Download vid2depth
 
 ```shell
-git clone --depth 1 https://github.com/tensorflow/models.git
+https://github.com/Auc7us/TFmodels.git
 ```
 
 ## 2. Datasets
 
-### Download KITTI dataset (174GB)
+### Download KITTI dataset (174GB) (optional)
 
 ```shell
 mkdir -p ~/vid2depth/kitti-raw-uncompressed
@@ -67,7 +61,7 @@ files:
 * leftImg8bit_sequence_trainvaltest.zip
 * camera_trainvaltest.zip
 
-### Download Bike dataset (34GB) (optional)
+### Download Bike dataset (34GB)
 
 Please see [https://research.google/tools/datasets/bike-video/](https://research.google/tools/datasets/bike-video/)
 for info on the bike video dataset.
@@ -87,10 +81,13 @@ tar xvf BikeVideoDataset.tar
 ### Download trained model
 
 ```shell
-mkdir -p ~/vid2depth/trained-model
-cd ~/vid2depth/trained-model
-wget https://storage.cloud.google.com/vid2depth/model/model-119496.zip
-unzip model-119496.zip
+mkdir -p ~/vid2depth/
+cd ~/vid2depth/
+git clone https://github.com/Auc7us/vid2depth-ckpts.git
+mv vid2depth-ckpts trained-model-Bike
+cd trained-model-Bike
+rm model-185802.data-00000-of-00001
+wget https://github.com/Auc7us/vid2depth-ckpts/raw/master/model-185802.data-00000-of-00001?download=
 ```
 
 ### Run inference
@@ -98,10 +95,10 @@ unzip model-119496.zip
 ```shell
 cd tensorflow/models/research/vid2depth
 python inference.py \
-  --kitti_dir ~/vid2depth/kitti-raw-uncompressed \
+  --dataset_dir ~/vid2depth/bike-uncompressed \
   --output_dir ~/vid2depth/inference \
-  --kitti_video 2011_09_26/2011_09_26_drive_0009_sync \
-  --model_ckpt ~/vid2depth/trained-model/model-119496
+  --dataset_video 2806 \
+  --model_ckpt ~/vid2depth/trained-model-Bike/model-185802
 ```
 
 ## 4. Training
@@ -110,7 +107,7 @@ python inference.py \
 
 ```shell
 # Prepare training sequences.
-cd tensorflow/models/research/vid2depth
+cd ~/TFmodels/research/vid2depth
 python dataset/gen_data.py \
   --dataset_name kitti_raw_eigen \
   --dataset_dir ~/vid2depth/kitti-raw-uncompressed \
@@ -122,7 +119,7 @@ python dataset/gen_data.py \
 
 ```shell
 # Prepare training sequences.
-cd tensorflow/models/research/vid2depth
+cd ~/TFmodels/research/vid2depth
 python dataset/gen_data.py \
   --dataset_name cityscapes \
   --dataset_dir ~/vid2depth/cityscapes-uncompressed \
@@ -134,7 +131,7 @@ python dataset/gen_data.py \
 
 ```shell
 # Prepare training sequences.
-cd tensorflow/models/research/vid2depth
+cd ~/TFmodels/research/vid2depth
 python dataset/gen_data.py \
   --dataset_name bike \
   --dataset_dir ~/vid2depth/bike-uncompressed \
@@ -144,8 +141,8 @@ python dataset/gen_data.py \
 
 ### Compile the ICP op
 
-The pre-trained model is trained using the ICP loss.  It is possible to run
-inference on this pre-trained model without compiling the ICP op.  It is also
+The pre-trained model is trained without using the ICP loss.  It is possible to run
+inference on this pre-trained model with compiling the ICP op.  It is also
 possible to train a new model from scratch without compiling the ICP op by
 setting the icp loss to zero.
 
@@ -159,7 +156,7 @@ use the CMakeLists.txt file at
 # Train
 cd tensorflow/models/research/vid2depth
 python train.py \
-  --data_dir ~/vid2depth/data/kitti_raw_eigen \
+  --data_dir ~/vid2depth/data/bike \
   --seq_length 3 \
   --reconstr_weight 0.85 \
   --smooth_weight 0.05 \
@@ -168,24 +165,3 @@ python train.py \
   --checkpoint_dir ~/vid2depth/checkpoints
 ```
 
-## Reference
-If you find our work useful in your research please consider citing our paper:
-
-```
-@inproceedings{mahjourian2018unsupervised,
-  title={Unsupervised Learning of Depth and Ego-Motion from Monocular Video Using 3D Geometric Constraints},
-    author={Mahjourian, Reza and Wicke, Martin and Angelova, Anelia},
-    booktitle = {CVPR},
-    year={2018}
-}
-```
-
-## Contact
-
-To ask questions or report issues please open an issue on the tensorflow/models
-[issues tracker](https://github.com/tensorflow/models/issues). Please assign
-issues to [@rezama](https://github.com/rezama).
-
-## Credits
-
-This implementation is derived from [SfMLearner](https://github.com/tinghuiz/SfMLearner) by [Tinghui Zhou](https://github.com/tinghuiz).
