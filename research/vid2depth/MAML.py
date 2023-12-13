@@ -69,9 +69,7 @@ def maml_outer_loop(tasks, weights, num_inner_updates, epoch_num, inner_lr, meta
     - None
     """
 
-    total_outer_gradients = [tf.zeros_like(weight) for weight in weights[0]]
-    meta_optimizer = tf.train.AdamOptimizer(meta_lr)
-    
+    total_outer_gradients = [tf.zeros_like(weight) for weight in weights]       
     for task in tasks:
         # Unpack the task data
         support_set_dir, query_set_dir = task
@@ -103,11 +101,9 @@ def train_maml():
     - meta_lr: Learning rate for the meta-update.
     - num_epochs: Number of epochs to train.
     """
-    weights = [
-    [tf.Variable(def_rec_wt, trainable=True),
+    weights = [tf.Variable(def_rec_wt, trainable=True),
      tf.Variable(def_sm_wt, trainable=True),
      tf.Variable(def_ssim_wt, trainable=True)]
-]
 
     for epoch in range(FLAGS.num_epochs):
         tasks = []
@@ -129,6 +125,8 @@ meta_lr = 0.001
 def_rec_wt = 0.85
 def_sm_wt = 0.05
 def_ssim_wt = 0.15
+
+meta_optimizer = tf.train.AdamOptimizer(meta_lr)
 
 def main(argv):
     del argv  # Unused.
