@@ -141,14 +141,14 @@ def train(train_model, pretrained_ckpt, checkpoint_dir, train_steps,
           'incr_global_step': train_model.incr_global_step
       }
 
-      if step % summary_freq == 0:
+      if step % 100  == 0:
         fetches['loss'] = train_model.total_loss
         fetches['summary'] = sv.summary_op
 
       results = sess.run(fetches)
       global_step = results['global_step']
 
-      if step % summary_freq == 0:
+      if step % 100 == 0:
         sv.summary_writer.add_summary(results['summary'], global_step)
         train_epoch = math.ceil(global_step / steps_per_epoch)
         train_step = global_step - (train_epoch - 1) * steps_per_epoch
@@ -159,7 +159,7 @@ def train(train_model, pretrained_ckpt, checkpoint_dir, train_steps,
             train_epoch, train_step, steps_per_epoch, this_cycle,
             time.time() - start_time, results['loss'])
 
-      if step % steps_per_epoch == 0:
+      if step % 100  == 0:
         logging.info('[*] Saving checkpoint to %s...', checkpoint_dir)
         saver.save(sess, os.path.join(checkpoint_dir, 'model'),
                    global_step=global_step)

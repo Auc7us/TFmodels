@@ -47,6 +47,8 @@ flags.DEFINE_float('icp_weight', 0.0, 'ICP loss weight.')
 flags.DEFINE_integer('batch_size', 4, 'The size of a sample batch')
 flags.DEFINE_integer('img_height', 128, 'Input frame height.')
 flags.DEFINE_integer('img_width', 416, 'Input frame width.')
+flags.DEFINE_integer('seq_length', 3, 'sequence length for training.')
+flags.DEFINE_bool('legacy_mode',False , 'used to activate legacy mode which limits losses to only middle frame in a sequence')
 
 # **** MAML Model Flags ****
 flags.DEFINE_integer('num_tasks', 6, 'Number of tasks to train on.')
@@ -57,10 +59,11 @@ flags.DEFINE_integer('num_epochs', 4, 'Number of epochs(outer loop iterations) t
 flags.DEFINE_integer('train_steps', 2000, 'Number of training steps.')
 flags.DEFINE_integer('summary_freq', 100, 'Save summaries every N steps.')
 
+
 def initialize_model(inOrOut , subtask_dir):
     # Initialize your model here (adjust arguments as needed)
     maml_model = modelMAML.Model(data_dir = subtask_dir,
-                                 for_inner = inOrOut,
+                                 in_or_out = inOrOut,
                                  learning_rate=FLAGS.inner_lr,
                                  beta1=FLAGS.beta1,
                                  reconstr_weight=FLAGS.reconstr_weight,
@@ -70,8 +73,7 @@ def initialize_model(inOrOut , subtask_dir):
                                  batch_size=FLAGS.batch_size,
                                  img_height=FLAGS.img_height,
                                  img_width=FLAGS.img_width,
-                                 seq_length=FLAGS.seq_length,
-                                 legacy_mode=FLAGS.legacy_mode) 
+                                 seq_length=FLAGS.seq_length)
 
     # Get the trainable variables within the depth network scope
     depth_network_variables = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, scope='depth_net')
@@ -251,15 +253,7 @@ def maml_outer_loop(tasks, weights, num_inner_updates, epoch_num, meta_lr, num_t
 def train_maml():
     
     """
-    Train the MAML model.
-
-    Args:
-    - data_dir: Directory where tasks data is stored.
-    - num_tasks: Number of tasks to train on.
-    - num_inner_updates: Number of updates in the inner loop.
-    - inner_lr: Learning rate for the inner loop.
-    - meta_lr: Learning rate for the meta-update.
-    - num_epochs: Number of epochs to train.
+    Train the MAML model 
     """
     # Initialize weights for the first epoch
     initial_model, _ = initialize_model(INNER_LOOP, FLAGS.data_dir)
