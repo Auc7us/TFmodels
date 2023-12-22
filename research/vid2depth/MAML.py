@@ -49,6 +49,8 @@ flags.DEFINE_integer('img_height', 128, 'Input frame height.')
 flags.DEFINE_integer('img_width', 416, 'Input frame width.')
 flags.DEFINE_integer('seq_length', 3, 'sequence length for training.')
 flags.DEFINE_bool('legacy_mode',False , 'used to activate legacy mode which limits losses to only middle frame in a sequence')
+flags.DEFINE_string('pretrained_ckpt', None, 'Path to checkpoint with '
+                    'pretrained weights.  Do not include .data* extension.')
 
 # **** MAML Model Flags ****
 flags.DEFINE_integer('num_tasks', 6, 'Number of tasks to train on.')
@@ -85,8 +87,11 @@ def assign_weights(model, new_weights, sess):
         if var.name in new_weights:
             sess.run(tf.assign(var, new_weights[var.name]))
 
-def fetch_weights(train_model, checkpoint_dir, train_steps, summary_freq, initial_weights=None):
+def fetch_weights(train_model, pretrained_ckpt, checkpoint_dir, train_steps, summary_freq, initial_weights=None):
   """Train model."""
+  if pretrained_ckpt is not None:
+    vars_to_restore = util.get_vars_to_restore(pretrained_ckpt)
+    pretrain_restorer = tf.train.Saver(vars_to_restore)
   vars_to_save = util.get_vars_to_restore()
   saver = tf.train.Saver(vars_to_save + [train_model.global_step],
                          max_to_keep=MAX_TO_KEEP)
@@ -95,6 +100,9 @@ def fetch_weights(train_model, checkpoint_dir, train_steps, summary_freq, initia
   config = tf.ConfigProto()
   config.gpu_options.allow_growth = True
   with sv.managed_session(config=config) as sess:
+    if pretrained_ckpt is not None:
+      logging.info('Restoring pretrained weights from %s', pretrained_ckpt)
+      pretrain_restorer.restore(sess, pretrained_ckpt)
     if initial_weights is not None:
       assign_weights(train_model, initial_weights, sess)
 
@@ -206,7 +214,7 @@ def maml_inner_loop(support_set_dir, weights, epoch_num, num_inner_updates):
         gfile.MakeDirs(checkpoint_dir)
     n_steps = reader.DataReader(support_set_dir, FLAGS.batch_size, FLAGS.img_height, FLAGS.img_width, FLAGS.seq_length, NUM_SCALES).steps_per_epoch
     # fetch weights after training on support data set
-    support_set_weights = fetch_weights(model_copy, checkpoint_dir, num_inner_updates*n_steps, FLAGS.summary_freq, initial_weights = weights)
+    support_set_weights = fetch_weights(model_copy, FLAGS.pretrained_ckpt, checkpoint_dir, num_inner_updates*n_steps, FLAGS.summary_freq, initial_weights = weights)
     
     # Return the weights after the inner loop updates and the final support set loss
     return support_set_weights
