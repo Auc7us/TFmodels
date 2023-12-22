@@ -165,3 +165,13 @@ python train.py \
   --checkpoint_dir ~/vid2depth/checkpoints
 ```
 
+### Run MAML Training
+```shell
+python MAML.py \
+  --data_dir /home/flash/vid2depth/data/bike \
+  --num_tasks 5 \
+  --num_inner_updates 2 \
+  --inner_lr 0.0002 \
+  --meta_lr 0.001 \
+  --num_epochs 4
+```
